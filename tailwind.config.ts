@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 export default {
   darkMode: ["class"],
@@ -69,12 +70,12 @@ export default {
           DEFAULT: "hsl(var(--earth))",
           light: "hsl(var(--earth-light))",
         },
-        pastel: {
-          rose: "hsl(var(--pastel-rose))",
-          lavender: "hsl(var(--pastel-lavender))",
-          peach: "hsl(var(--pastel-peach))",
-          mint: "hsl(var(--pastel-mint))",
-          sky: "hsl(var(--pastel-sky))",
+      earthy: {
+        rust: "#b7410e", // rich burnt orange/rust
+        forest: "#2d4a22", // deep forest green
+        ochre: "#c77926", // vibrant ochre/mustard
+        clay: "#a45d47", // terracotta clay
+        sun: "#d99b2e", // warm sun yellow
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -133,5 +134,18 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        "h1, h2, h3, h4, h5, h6": {
+          transition: "color 0.4s ease-out, transform 0.4s ease-out",
+          "&:hover": {
+            color: theme("colors.earthy.rust"),
+            transform: "translateY(-2px)",
+          },
+        },
+      });
+    }),
+  ],
 } satisfies Config;

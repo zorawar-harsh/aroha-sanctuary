@@ -1,142 +1,112 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import ScrollReveal from "../components/ScrollReveal";
+import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [step, setStep] = useState(0);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [result, setResult] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const steps = [
-    {
-      label: "Your Name",
-      field: "name" as const,
-      type: "text",
-      placeholder: "What should I call you?",
-    },
-    {
-      label: "Your Email",
-      field: "email" as const,
-      type: "email",
-      placeholder: "Where can I respond?",
-    },
-    {
-      label: "Your Message",
-      field: "message" as const,
-      type: "textarea",
-      placeholder: "Share whatever feels right. There are no wrong words here.",
-    },
-  ];
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setIsSubmitting(true);
+    setResult("Sending...");
+    
+    const formData = new FormData(form);
+    // Your unique Web3Forms Access Key
+    formData.append("access_key", "12b4257b-cef6-47a4-99b6-44a49dd9c641");
 
-  const handleNext = () => {
-    if (step < steps.length - 1) setStep(step + 1);
-    else {
-      setSubmitted(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully! I will get back to you soon.");
+        form.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+      setResult("Something went wrong! Please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  const currentStep = steps[step];
-  const canProceed = form[currentStep?.field]?.trim().length > 0;
-
   return (
-    <div className="min-h-screen pt-32">
-      <section className="section-padding">
-        <div className="max-w-2xl mx-auto">
-          <ScrollReveal>
-            <p className="text-sm font-sans uppercase tracking-[0.3em] text-muted-foreground mb-6">Connect</p>
-            <h1 className="text-4xl md:text-5xl font-serif font-light text-foreground mb-4">Get in Touch</h1>
-            <p className="text-base font-sans font-light text-muted-foreground leading-relaxed mb-4">
-              If you feel drawn to this work, you're welcome to reach out.
-            </p>
-            <p className="text-base font-sans font-light text-muted-foreground leading-relaxed mb-16">
-              You don't need to have the right words or clarity before contacting me.
-              We can begin from wherever you are.
-            </p>
-          </ScrollReveal>
-
-          {!submitted ? (
-            <div className="glass-card p-8 md:p-12">
-              {/* Progress dots */}
-              <div className="flex gap-2 mb-10">
-                {steps.map((_, i) => (
-                  <div
-                    key={i}
-                    className={`h-1 rounded-full transition-all duration-500 ${
-                      i <= step ? "bg-sage w-8" : "bg-border w-4"
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={step}
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -30 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                >
-                  <label className="block text-sm font-sans text-muted-foreground mb-3 uppercase tracking-wider">
-                    {currentStep.label}
-                  </label>
-                  {currentStep.type === "textarea" ? (
-                    <textarea
-                      value={form[currentStep.field]}
-                      onChange={(e) => setForm({ ...form, [currentStep.field]: e.target.value })}
-                      placeholder={currentStep.placeholder}
-                      rows={5}
-                      className="w-full bg-transparent border-b border-border/50 focus:border-sage/50 outline-none text-foreground font-sans font-light text-lg py-3 resize-none placeholder:text-muted-foreground/40 transition-colors duration-300"
-                      autoFocus
-                    />
-                  ) : (
-                    <input
-                      type={currentStep.type}
-                      value={form[currentStep.field]}
-                      onChange={(e) => setForm({ ...form, [currentStep.field]: e.target.value })}
-                      placeholder={currentStep.placeholder}
-                      className="w-full bg-transparent border-b border-border/50 focus:border-sage/50 outline-none text-foreground font-sans font-light text-lg py-3 placeholder:text-muted-foreground/40 transition-colors duration-300"
-                      autoFocus
-                      onKeyDown={(e) => e.key === "Enter" && canProceed && handleNext()}
-                    />
-                  )}
-                </motion.div>
-              </AnimatePresence>
-
-              <div className="flex items-center justify-between mt-10">
-                {step > 0 ? (
-                  <button
-                    onClick={() => setStep(step - 1)}
-                    className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    ← Back
-                  </button>
-                ) : (
-                  <div />
-                )}
-                <button
-                  onClick={handleNext}
-                  disabled={!canProceed}
-                  className="btn-ripple bg-sage/10 border border-sage/20 text-foreground font-sans text-sm px-6 py-2.5 rounded-full hover:bg-sage/20 transition-all duration-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
-                >
-                  {step < steps.length - 1 ? "Continue →" : "Send with Care"}
-                </button>
-              </div>
+    <div className="min-h-screen pt-32 pb-20 px-6 max-w-4xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden"
+      >
+        <div className="relative z-10">
+          <h1 className="text-3xl md:text-4xl font-serif text-amber-950 mb-6 text-center">Get in Touch</h1>
+          <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto">
+            I am here to hold space for you. Send me a message, and I'll get back to you as soon as I can.
+          </p>
+          
+          <form onSubmit={onSubmit} className="flex flex-col gap-6 max-w-md mx-auto">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-amber-950 mb-2">Name</label>
+              <input 
+                type="text" 
+                id="name"
+                name="name" 
+                required 
+                className="w-full p-3 bg-transparent border border-amber-900/30 rounded-xl focus:outline-none focus:border-amber-900 focus:ring-1 focus:ring-amber-900 transition-all" 
+              />
             </div>
-          ) : (
-            <ScrollReveal>
-              <div className="glass-card p-8 md:p-12 text-center">
-                <div className="w-12 h-12 rounded-full bg-sage/15 mx-auto mb-6 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-sage" />
-                </div>
-                <p className="text-xl font-serif font-light text-foreground mb-3">Thank you</p>
-                <p className="text-sm font-sans text-muted-foreground">
-                  I will respond with care and discretion.
-                </p>
-              </div>
-            </ScrollReveal>
-          )}
+            <div>
+              <label htmlFor="email" className="block text-base font-bold text-amber-950 mb-2">Email</label>
+              <input 
+                type="email" 
+                id="email"
+                name="email" 
+                required 
+                className="w-full p-3 bg-transparent border border-amber-900/30 rounded-xl focus:outline-none focus:border-amber-900 focus:ring-1 focus:ring-amber-900 transition-all" 
+              />
+            </div>
+            <div>
+            <label htmlFor="message" className="block text-base font-bold text-amber-950 mb-2">Message</label>
+            <textarea  
+                name="message" 
+                required 
+                rows={5} 
+                className="w-full p-3 bg-transparent border border-amber-900/30 rounded-xl focus:outline-none focus:border-amber-900 focus:ring-1 focus:ring-amber-900 transition-all resize-none" 
+              ></textarea>
+            </div>
+
+            {/* Hidden fields to make the email look cleaner */}
+            <input type="hidden" name="subject" value="New Contact from Aroha Sanctuary" />
+            <input type="hidden" name="from_name" value="Aroha Website" />
+
+            <button 
+              type="submit" 
+              disabled={isSubmitting}
+            className="w-full bg-amber-900 text-white py-4 px-8 rounded-xl hover:bg-amber-950 transition-colors disabled:opacity-70 disabled:cursor-not-allowed font-bold text-lg mt-2 shadow-sm"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </button>
+
+            {result && (
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className={`text-center text-sm mt-4 ${result.includes("Successfully") ? "text-green-700" : "text-amber-900"}`}
+              >
+                {result}
+              </motion.p>
+            )}
+          </form>
         </div>
-      </section>
+      </motion.div>
     </div>
   );
 };
