@@ -48,6 +48,13 @@
     --earth: 30 10% 25%;
     --earth-light: 30 8% 50%;
 
+    /* Pastel accents */
+    --pastel-rose: 350 60% 85%;
+    --pastel-lavender: 270 40% 85%;
+    --pastel-peach: 25 70% 88%;
+    --pastel-mint: 150 35% 82%;
+    --pastel-sky: 200 50% 85%;
+
     /* Glassmorphism */
     --glass-bg: 38 33% 96% / 0.6;
     --glass-border: 35 20% 85% / 0.3;

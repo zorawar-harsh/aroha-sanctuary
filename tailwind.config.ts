@@ -69,6 +69,13 @@ export default {
           DEFAULT: "hsl(var(--earth))",
           light: "hsl(var(--earth-light))",
         },
+        pastel: {
+          rose: "hsl(var(--pastel-rose))",
+          lavender: "hsl(var(--pastel-lavender))",
+          peach: "hsl(var(--pastel-peach))",
+          mint: "hsl(var(--pastel-mint))",
+          sky: "hsl(var(--pastel-sky))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
