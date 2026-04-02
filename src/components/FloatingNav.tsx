@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import arohaLogo from "@/assets/aroha-logo.jpeg";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -37,11 +38,8 @@ const FloatingNav = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="glass-card flex items-center gap-1 px-2 py-1 rounded-full">
-          <Link
-            to="/"
-            className="font-serif text-lg font-medium text-foreground px-3 py-1 tracking-wide"
-          >
-            Aroha
+          <Link to="/" className="flex items-center gap-2 px-3 py-1">
+            <img src={arohaLogo} alt="Aroha" className="h-8 w-auto rounded" />
           </Link>
           <div className="w-px h-5 bg-border/50 mx-1" />
           {navItems.slice(1).map((item) => (
@@ -61,6 +59,11 @@ const FloatingNav = () => {
       </motion.nav>
 
       {/* Mobile nav */}
+      <div className="fixed top-4 left-4 z-50 md:hidden">
+        <Link to="/">
+          <img src={arohaLogo} alt="Aroha" className="h-10 w-auto rounded glass-card p-1" />
+        </Link>
+      </div>
       <div className="fixed top-4 right-4 z-50 md:hidden">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}

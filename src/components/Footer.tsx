@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
+import arohaLogo from "@/assets/aroha-logo.jpeg";
 
 const Footer = () => (
-  <footer className="section-padding bg-fog/50 border-t border-border/30">
-    <div className="max-w-5xl mx-auto">
+  <footer className="section-padding bg-fog/50 border-t border-border/30 relative overflow-hidden">
+    {/* Pastel decorative elements */}
+    <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-pastel-lavender/20 blur-3xl -translate-x-1/2 -translate-y-1/2" />
+    <div className="absolute bottom-0 right-0 w-48 h-48 rounded-full bg-pastel-mint/20 blur-3xl translate-x-1/4 translate-y-1/4" />
+
+    <div className="max-w-5xl mx-auto relative z-10">
       <div className="grid md:grid-cols-3 gap-12">
         <div>
-          <h3 className="font-serif text-2xl font-medium text-foreground mb-2">Aroha</h3>
+          <img src={arohaLogo} alt="Aroha" className="h-16 w-auto rounded mb-4" />
           <p className="text-sm text-muted-foreground leading-relaxed">
             Inner Balance & Life Transitions
           </p>
