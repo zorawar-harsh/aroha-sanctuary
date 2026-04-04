@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import FloatingNav from "./components/FloatingNav";
 import ScrollProgress from "./components/ScrollProgress";
 import CustomCursor from "./components/CustomCursor";
+import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <CustomCursor />
         <ScrollProgress />
         <FloatingNav />

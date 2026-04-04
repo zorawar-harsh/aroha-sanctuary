@@ -11,19 +11,19 @@ const About = () => (
 
       <div className="max-w-3xl mx-auto relative z-10">
         <ScrollReveal>
-          <p className="text-base font-sans font-bold uppercase tracking-[0.2em] text-amber-900 mb-6">About</p>
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-amber-950 mb-8">Aroha</h1>
+          <p className="text-lg font-sans font-bold uppercase tracking-[0.2em] text-amber-900 mb-6">About</p>
+          <h1 className="text-6xl md:text-7xl font-serif font-bold text-amber-950 mb-8">Aroha</h1>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <p className="text-2xl font-serif font-semibold text-amber-900/90 italic mb-8">
+          <p className="text-3xl font-serif font-semibold text-amber-900/90 italic mb-8">
             Aroha means love, compassion, and care.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
-          <p className="text-lg font-sans font-medium text-amber-950/90 leading-relaxed mb-6">
+          <p className="text-xl font-sans font-medium text-amber-950/90 leading-relaxed mb-6">
             This practice was created as a quiet, supportive space for people who are experiencing inner change—often during moments when life feels emotionally disorienting or unsteady.
           </p>
-          <p className="text-lg font-sans font-medium text-amber-950/90 leading-relaxed">
+          <p className="text-xl font-sans font-medium text-amber-950/90 leading-relaxed">
             At Aroha, emotional responses to life events are not seen as problems to be fixed, but as signals asking for understanding, space, and care.
           </p>
         </ScrollReveal>
