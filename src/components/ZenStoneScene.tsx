@@ -57,7 +57,7 @@ const ZenStone = () => {
 };
 
 const ZenStoneScene = () => (
-  <div className="w-full h-[400px] md:h-[500px]">
+  <div className="w-full h-[300px] md:h-[500px]">
     <Canvas
       camera={{ position: [0, 0, 5], fov: 40 }}
       dpr={[1, 1.5]}

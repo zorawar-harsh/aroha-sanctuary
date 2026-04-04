@@ -28,9 +28,9 @@ const Reflections = () => (
     <section className="section-padding">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
-          <p className="text-base font-sans font-bold uppercase tracking-[0.2em] text-amber-900 mb-6">Quiet Words</p>
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-amber-950 mb-4">Reflections</h1>
-          <p className="text-lg font-sans font-medium text-amber-900/90 mb-16">
+          <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-amber-900 mb-6">Quiet Words</p>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-amber-950 mb-4">Reflections</h1>
+          <p className="text-base md:text-lg font-sans font-medium text-amber-900/90 mb-16">
             Thoughts shared without schedule or expectation — just when they feel true.
           </p>
         </ScrollReveal>
@@ -39,7 +39,7 @@ const Reflections = () => (
           {reflections.map((r, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
               <div className="glass-card-hover p-8 md:p-10">
-                <p className="text-xl md:text-2xl font-serif font-semibold text-amber-950/90 leading-relaxed italic mb-6">
+                <p className="text-lg md:text-2xl font-serif font-semibold text-amber-950/90 leading-relaxed italic mb-6">
                   "{r.text}"
                 </p>
                 <p className="text-sm font-sans font-bold text-amber-900/70 uppercase tracking-wider">{r.date}</p>

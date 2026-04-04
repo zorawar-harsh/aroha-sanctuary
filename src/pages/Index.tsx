@@ -68,7 +68,7 @@ const Index = () => (
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-base font-sans uppercase tracking-[0.3em] text-muted-foreground mb-8"
+          className="text-sm md:text-base font-sans uppercase tracking-[0.3em] text-muted-foreground mb-8"
         >
           Inner Balance & Life Transitions
         </motion.p>
@@ -77,7 +77,7 @@ const Index = () => (
           initial={{ opacity: 0, filter: "blur(20px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif font-light text-foreground leading-[1.15] mb-6"
+          className="text-4xl md:text-7xl lg:text-8xl font-serif font-light text-foreground leading-[1.15] mb-6"
         >
           Mindshift for Life{" "}
           <span className="text-gradient">Transformation</span>
@@ -87,7 +87,7 @@ const Index = () => (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-xl md:text-2xl font-sans font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl font-sans font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed"
         >
           Supporting individuals through inner dissatisfaction and major life changes with clarity, calm, and care.
         </motion.p>
@@ -96,7 +96,7 @@ const Index = () => (
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.3 }}
-          className="text-base font-sans text-muted-foreground/70 mt-4 italic"
+          className="text-sm md:text-base font-sans text-muted-foreground/70 mt-4 italic"
         >
           A gentle space to pause, reflect, and find your way forward.
         </motion.p>
@@ -110,7 +110,7 @@ const Index = () => (
       >
         <Suspense
           fallback={
-            <div className="w-full h-[400px] flex items-center justify-center"><Loader /></div>
+            <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center"><Loader /></div>
           }
         >
           <ZenStoneScene />
@@ -128,7 +128,7 @@ const Index = () => (
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center pt-16">
         <div>
           <ScrollReveal>
-            <p className="text-2xl md:text-3xl font-serif font-light text-foreground leading-relaxed mb-8">
+            <p className="text-xl md:text-3xl font-serif font-light text-foreground leading-relaxed mb-8">
               Life doesn't always fall apart loudly.
               <br />
               <span className="text-muted-foreground">
@@ -137,12 +137,12 @@ const Index = () => (
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="text-lg font-sans font-light text-muted-foreground leading-relaxed mb-4">
+            <p className="text-base md:text-lg font-sans font-light text-muted-foreground leading-relaxed mb-4">
               At Aroha, we support individuals who are navigating inner dissatisfaction or major life transitions—such as separation, divorce, career shifts, or prolonged emotional strain—to reconnect with clarity, balance, and a sense of fulfilment.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
-            <p className="text-lg font-sans font-light text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg font-sans font-light text-muted-foreground leading-relaxed">
               This is a space for quiet reflection, emotional grounding, and steady inner realignment.
             </p>
           </ScrollReveal>
@@ -170,7 +170,7 @@ const Index = () => (
 
       <div className="max-w-5xl mx-auto relative z-10">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-light text-center text-foreground mb-16">
+          <h2 className="text-3xl md:text-5xl font-serif font-light text-center text-foreground mb-16">
             How I Work
           </h2>
         </ScrollReveal>
@@ -179,13 +179,13 @@ const Index = () => (
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 0.15}>
               <div className={`glass-card-hover p-8 md:p-10 h-full flex flex-col border ${service.color} rounded-2xl`}>
-                <span className="text-sm font-sans uppercase tracking-[0.2em] text-sage-dark mb-4">
+                <span className="text-xs md:text-sm font-sans uppercase tracking-[0.2em] text-sage-dark mb-4">
                   0{i + 1}
                 </span>
-                <h3 className="text-3xl font-serif font-medium text-foreground mb-4">
+                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-4">
                   {service.title}
                 </h3>
-                <p className="text-base font-sans font-light text-muted-foreground leading-relaxed flex-1">
+                <p className="text-sm md:text-base font-sans font-light text-muted-foreground leading-relaxed flex-1">
                   {service.description}
                 </p>
               </div>
@@ -214,10 +214,10 @@ const Index = () => (
 
       <div className="max-w-3xl mx-auto relative z-10">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-light text-center text-foreground mb-4">
+          <h2 className="text-3xl md:text-5xl font-serif font-light text-center text-foreground mb-4">
             Who This Is For
           </h2>
-          <p className="text-center text-muted-foreground font-sans text-lg mb-12">
+          <p className="text-center text-muted-foreground font-sans text-base md:text-lg mb-12">
             This work may be right for you if you:
           </p>
         </ScrollReveal>
@@ -229,7 +229,7 @@ const Index = () => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-muted/30 transition-colors duration-300">
                   <div className={`w-2.5 h-2.5 rounded-full ${dotColors[i]} mt-2 shrink-0`} />
-                  <p className="text-lg font-sans font-light text-foreground/80 leading-relaxed">
+                  <p className="text-base md:text-lg font-sans font-light text-foreground/80 leading-relaxed">
                     {item}
                   </p>
                 </div>
@@ -248,7 +248,7 @@ const Index = () => (
 
       <div className="max-w-2xl mx-auto text-center relative z-10">
         <ScrollReveal>
-          <p className="text-2xl md:text-3xl font-serif font-light text-foreground leading-relaxed mb-8">
+          <p className="text-xl md:text-3xl font-serif font-light text-foreground leading-relaxed mb-8">
             If this resonates with you,
             <br />
             you're welcome to explore further or reach out when it feels right.
@@ -257,7 +257,7 @@ const Index = () => (
         <ScrollReveal delay={0.2}>
           <Link
             to="/contact"
-            className="inline-block btn-ripple bg-sage/10 border border-sage/20 text-foreground font-sans text-base px-8 py-3.5 rounded-full hover:bg-sage/20 transition-all duration-500"
+            className="inline-block btn-ripple bg-sage/10 border border-sage/20 text-foreground font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 transition-all duration-500"
           >
             Begin a Conversation
           </Link>

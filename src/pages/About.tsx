@@ -11,19 +11,19 @@ const About = () => (
 
       <div className="max-w-3xl mx-auto relative z-10">
         <ScrollReveal>
-          <p className="text-lg font-sans font-bold uppercase tracking-[0.2em] text-amber-900 mb-6">About</p>
-          <h1 className="text-6xl md:text-7xl font-serif font-bold text-amber-950 mb-8">Aroha</h1>
+          <p className="text-base md:text-lg font-sans font-bold uppercase tracking-[0.2em] text-amber-900 mb-6">About</p>
+          <h1 className="text-4xl md:text-7xl font-serif font-bold text-amber-950 mb-8">Aroha</h1>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <p className="text-3xl font-serif font-semibold text-amber-900/90 italic mb-8">
+          <p className="text-2xl md:text-3xl font-serif font-semibold text-amber-900/90 italic mb-8">
             Aroha means love, compassion, and care.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
-          <p className="text-xl font-sans font-medium text-amber-950/90 leading-relaxed mb-6">
+          <p className="text-lg md:text-xl font-sans font-medium text-amber-950/90 leading-relaxed mb-6">
             This practice was created as a quiet, supportive space for people who are experiencing inner change—often during moments when life feels emotionally disorienting or unsteady.
           </p>
-          <p className="text-xl font-sans font-medium text-amber-950/90 leading-relaxed">
+          <p className="text-lg md:text-xl font-sans font-medium text-amber-950/90 leading-relaxed">
             At Aroha, emotional responses to life events are not seen as problems to be fixed, but as signals asking for understanding, space, and care.
           </p>
         </ScrollReveal>
@@ -39,26 +39,26 @@ const About = () => (
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-amber-950 mb-8">About Poonam</h2>
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-amber-950 mb-8">About Poonam</h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-xl font-serif font-semibold text-amber-900/90 italic mb-8">
+              <p className="text-lg md:text-xl font-serif font-semibold text-amber-900/90 italic mb-8">
                 Hi, I'm Poonam.
               </p>
             </ScrollReveal>
             <div className="space-y-6">
               <ScrollReveal delay={0.15}>
-                <p className="text-lg font-sans font-medium text-amber-950/90 leading-relaxed">
+                <p className="text-base md:text-lg font-sans font-medium text-amber-950/90 leading-relaxed">
                   I work with individuals who appear steady on the outside but feel unsettled or disconnected within—especially during or after significant life changes.
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
-                <p className="text-lg font-sans font-medium text-amber-950/90 leading-relaxed">
+                <p className="text-base md:text-lg font-sans font-medium text-amber-950/90 leading-relaxed">
                   My approach is calm, non-pathologising, and reflective. I believe that clarity and emotional balance emerge naturally when people are given a safe, respectful space to slow down and reconnect with themselves.
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.25}>
-                <p className="text-lg font-sans font-medium text-amber-950/90 leading-relaxed">
+                <p className="text-base md:text-lg font-sans font-medium text-amber-950/90 leading-relaxed">
                   My role is not to tell you what to do, but to support you in finding your own grounded understanding and direction.
                 </p>
               </ScrollReveal>
@@ -85,7 +85,7 @@ const About = () => (
 
         <ScrollReveal delay={0.3}>
           <div className="mt-16 glass-card p-8 md:p-10 border-2 border-earthy-forest/30">
-            <p className="text-lg font-sans font-semibold text-amber-950/90 leading-relaxed italic">
+            <p className="text-base md:text-lg font-sans font-semibold text-amber-950/90 leading-relaxed italic">
               "Life coaching, at its core, is a journey of self-discovery — learning to recognize inner obstacles, move beyond fear, reconnect with one's innate wisdom, and take conscious action toward meaningful goals."
             </p>
           </div>
@@ -114,17 +114,17 @@ const About = () => (
 
         <div>
           <ScrollReveal>
-            <p className="text-lg font-sans font-medium text-amber-950/90 leading-relaxed mb-6">
+            <p className="text-base md:text-lg font-sans font-medium text-amber-950/90 leading-relaxed mb-6">
               I do not offer ready-made answers or advice. Instead, I walk alongside you — holding space, asking the right questions, and helping you bridge the gap between where you are and where you wish to be.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-lg font-sans font-medium text-amber-950/90 leading-relaxed mb-6">
+            <p className="text-base md:text-lg font-sans font-medium text-amber-950/90 leading-relaxed mb-6">
               Through self-awareness, emotional clarity, and grounded psychological tools, I support individuals in uncovering their true potential, making aligned choices, and building a life that feels authentic — both personally and professionally.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="text-xl font-serif font-bold text-amber-900/90 italic">
+            <p className="text-lg md:text-xl font-serif font-bold text-amber-900/90 italic">
               Coaching with me is not about fixing yourself. It is about remembering your strengths, reclaiming your voice, and learning to trust yourself again.
             </p>
           </ScrollReveal>
