@@ -24,14 +24,14 @@ const Services = () => (
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start relative z-10">
         <div>
           <ScrollReveal>
-            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-amber-900 mb-6">Services</p>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-amber-950 mb-8">
+            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-amber-900 dark:text-[#F1E4D1] mb-6">Services</p>
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-amber-950 dark:text-[#F1E4D1] mb-8">
               Individual Counselling Sessions
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="text-base md:text-lg font-sans font-medium text-amber-900/90 leading-relaxed mb-8">
+            <p className="text-base md:text-lg font-sans font-medium text-amber-900/90 dark:text-[#F1E4D1]/90 leading-relaxed mb-8">
               These sessions are designed for individuals who are experiencing:
             </p>
           </ScrollReveal>
@@ -43,7 +43,7 @@ const Services = () => (
                 <ScrollReveal key={i} delay={0.15 + i * 0.08}>
                   <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-muted/30 transition-colors duration-300">
                     <div className={`w-2.5 h-2.5 rounded-full ${colors[i]} mt-2 shrink-0`} />
-                    <p className="text-base md:text-lg font-sans font-medium text-amber-950/90 leading-relaxed">{item}</p>
+                    <p className="text-base md:text-lg font-sans font-medium text-amber-950/90 dark:text-[#F1E4D1]/90 leading-relaxed">{item}</p>
                   </div>
                 </ScrollReveal>
               );
@@ -51,7 +51,7 @@ const Services = () => (
           </div>
 
           <ScrollReveal delay={0.4}>
-            <p className="text-lg md:text-xl font-serif font-semibold text-amber-950/90 italic">
+            <p className="text-lg md:text-xl font-serif font-semibold text-amber-950/90 dark:text-[#F1E4D1]/90 italic">
               Sessions offer a calm space to reflect, process emotions, and rebuild inner steadiness.
             </p>
           </ScrollReveal>
@@ -81,25 +81,25 @@ const Services = () => (
     <section className="section-padding">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-amber-950 mb-8">Session Format</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-amber-950 dark:text-[#F1E4D1] mb-8">Session Format</h2>
         </ScrollReveal>
         <div className="glass-card p-8 md:p-10 mb-8 border-2 border-earthy-ochre/30">
           {formats.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
               <div className="flex items-center gap-4 py-3 border-b border-border/20 last:border-0">
                 <div className={`w-2 h-2 rounded-full ${item.color} shrink-0`} />
-                <p className="text-base md:text-lg font-sans font-medium text-amber-950/90">{item.text}</p>
+                <p className="text-base md:text-lg font-sans font-medium text-amber-950/90 dark:text-[#F1E4D1]/90">{item.text}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
         <ScrollReveal delay={0.3}>
-          <p className="text-sm md:text-base font-sans font-medium text-amber-900/80 mb-8">
+          <p className="text-sm md:text-base font-sans font-medium text-amber-900/80 dark:text-[#F1E4D1]/80 mb-8">
             Pricing and booking details can be shared on request or via contact.
           </p>
           <Link
             to="/contact"
-            className="inline-block btn-ripple bg-earthy-forest/10 border-2 border-earthy-forest/20 text-amber-950 font-sans font-bold text-sm md:text-base px-10 py-4 rounded-full hover:bg-earthy-forest/20 transition-all duration-500"
+            className="inline-block btn-ripple bg-earthy-forest/10 border-2 border-earthy-forest/20 text-amber-950 dark:text-[#F1E4D1] font-sans font-bold text-sm md:text-base px-10 py-4 rounded-full hover:bg-earthy-forest/20 transition-all duration-500"
           >
             Reach Out
           </Link>

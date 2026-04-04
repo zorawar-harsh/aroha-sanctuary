@@ -18,6 +18,7 @@ import Services from "./pages/Services";
 import Reflections from "./pages/Reflections";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { ThemeProvider } from "./hooks/use-theme";
 
 const queryClient = new QueryClient();
 
@@ -32,39 +33,41 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AnimatePresence>
-        {loading && (
-          <motion.div
-            key="loader"
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-cream-warm"
-            exit={{ y: "-100vh" }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <Loader />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <ThemeProvider>
+        <AnimatePresence>
+          {loading && (
+            <motion.div
+              key="loader"
+              className="fixed inset-0 z-[9999] flex items-center justify-center bg-cream-warm dark:bg-zinc-900"
+              exit={{ y: "-100vh" }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Loader />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <CustomCursor />
-          <ScrollProgress />
-          <FloatingNav />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/approach" element={<Approach />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/reflections" element={<Reflections />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </TooltipProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <CustomCursor />
+            <ScrollProgress />
+            <FloatingNav />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/approach" element={<Approach />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/reflections" element={<Reflections />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        </TooltipProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 };

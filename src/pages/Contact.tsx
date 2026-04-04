@@ -47,14 +47,14 @@ const Contact = () => {
         className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden"
       >
         <div className="relative z-10">
-          <h1 className="text-3xl md:text-4xl font-serif text-amber-950 mb-6 text-center">Get in Touch</h1>
+          <h1 className="text-3xl md:text-4xl font-serif text-amber-950 dark:text-[#F1E4D1] mb-6 text-center">Get in Touch</h1>
           <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto">
             I am here to hold space for you. Send me a message, and I'll get back to you as soon as I can.
           </p>
           
           <form onSubmit={onSubmit} className="flex flex-col gap-6 max-w-md mx-auto">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-amber-950 mb-2">Name</label>
+              <label htmlFor="name" className="block text-sm font-medium text-amber-950 dark:text-[#F1E4D1] mb-2">Name</label>
               <input 
                 type="text" 
                 id="name"
@@ -64,7 +64,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-base font-bold text-amber-950 mb-2">Email</label>
+              <label htmlFor="email" className="block text-base font-bold text-amber-950 dark:text-[#F1E4D1] mb-2">Email</label>
               <input 
                 type="email" 
                 id="email"
@@ -74,7 +74,7 @@ const Contact = () => {
               />
             </div>
             <div>
-            <label htmlFor="message" className="block text-base font-bold text-amber-950 mb-2">Message</label>
+            <label htmlFor="message" className="block text-base font-bold text-amber-950 dark:text-[#F1E4D1] mb-2">Message</label>
             <textarea  
                 name="message" 
                 required 
@@ -99,7 +99,7 @@ const Contact = () => {
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className={`text-center text-sm mt-4 ${result.includes("Successfully") ? "text-green-700" : "text-amber-900"}`}
+                className={`text-center text-sm mt-4 ${result.includes("Successfully") ? "text-green-700 dark:text-green-400" : "text-amber-900 dark:text-[#F1E4D1]"}`}
               >
                 {result}
               </motion.p>

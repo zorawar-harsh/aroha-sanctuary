@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import arohaLogo from "@/assets/aroha-logo.jpeg";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -44,13 +45,16 @@ const FloatingNav = () => {
               to={item.path}
               className={`px-4 py-2 rounded-full text-lg font-sans font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
                 location.pathname === item.path
-                  ? "bg-[#1f1d1c]/60 text-white"
-                  : "text-gray-200/80 hover:text-white hover:bg-[#1f1d1c]/40"
+                  ? "bg-[#1f1d1c]/60 text-white dark:text-[#F1E4D1]"
+                  : "text-gray-200/80 dark:text-[#F1E4D1]/80 hover:text-white dark:hover:text-[#F1E4D1] hover:bg-[#1f1d1c]/40"
               }`}
             >
               {item.label}
             </Link>
           ))}
+          <div className="ml-2">
+            <ThemeToggle />
+          </div>
         </div>
       </motion.nav>
 
@@ -62,7 +66,8 @@ const FloatingNav = () => {
       </div>
 
       {/* Mobile menu toggle */}
-      <div className="fixed top-4 right-4 z-50 md:hidden flex items-center h-24">
+      <div className="fixed top-4 right-4 z-50 md:hidden flex items-center h-24 gap-3">
+        <ThemeToggle />
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="bg-[#94294d]/95 text-white backdrop-blur-md border border-[#1f1d1c]/30 shadow-lg p-3 rounded-full"
@@ -87,8 +92,8 @@ const FloatingNav = () => {
                   to={item.path}
                   className={`px-5 py-4 rounded-xl text-xl font-sans font-bold transition-all duration-300 hover:pl-7 ${
                     location.pathname === item.path
-                      ? "bg-[#1f1d1c]/60 text-white"
-                      : "text-gray-200/80 hover:text-white hover:bg-[#1f1d1c]/40"
+                      ? "bg-[#1f1d1c]/60 text-white dark:text-[#F1E4D1]"
+                      : "text-gray-200/80 dark:text-[#F1E4D1]/80 hover:text-white dark:hover:text-[#F1E4D1] hover:bg-[#1f1d1c]/40"
                   }`}
                 >
                   {item.label}
