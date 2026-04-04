@@ -17,6 +17,8 @@ import Approach from "./pages/Approach";
 import Services from "./pages/Services";
 import Reflections from "./pages/Reflections";
 import Contact from "./pages/Contact";
+import Testimonial from "./pages/Testimonial";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "./hooks/use-theme";
 
@@ -62,6 +64,8 @@ const App = () => {
               <Route path="/services" element={<Services />} />
               <Route path="/reflections" element={<Reflections />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/testimonial" element={<Testimonial />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

@@ -8,10 +8,12 @@ import ThemeToggle from "@/components/ThemeToggle";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "How I Work", path: "/approach" },
+  { label: "Working", path: "/approach" },
   { label: "Services", path: "/services" },
   { label: "Reflections", path: "/reflections" },
   { label: "Contact", path: "/contact" },
+  { label: "Testimonial", path: "/testimonial" },
+  { label: "Blog", path: "/blog" },
 ];
 
 const FloatingNav = () => {
@@ -30,7 +32,7 @@ const FloatingNav = () => {
   return (
     <>
       <motion.nav
-        className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:block"
+        className=" max-w-full mx-auto fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:block"
         animate={{
           paddingInline: scrolled ? "1.5rem" : "2rem",
           paddingBlock: scrolled ? "0.5rem" : "0.75rem",
@@ -38,12 +40,12 @@ const FloatingNav = () => {
         }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="bg-[#94294d]/95 backdrop-blur-md border border-[#1f1d1c]/30 shadow-lg flex items-center gap-1 px-2 py-1 rounded-full">
+        <div className="bg-[#94294d]/95 backdrop-blur-md border border-[#1f1d1c]/30 shadow-lg flex items-center gap-1 px-3 py-2 rounded-full">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`px-4 py-2 rounded-full text-lg font-sans font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
+              className={`px-4 py-2 rounded-full text-md font-sans font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
                 location.pathname === item.path
                   ? "bg-[#1f1d1c]/60 text-white dark:text-[#F1E4D1]"
                   : "text-gray-200/80 dark:text-[#F1E4D1]/80 hover:text-white dark:hover:text-[#F1E4D1] hover:bg-[#1f1d1c]/40"
