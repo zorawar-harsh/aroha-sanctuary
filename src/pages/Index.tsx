@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ScrollReveal from "../components/ScrollReveal";
 import ZenStoneScene from "../components/ZenStoneScene";
 import meditationHero from "@/assets/meditation-hero.jpg";
+import Loader from "../components/Loader";
 import zenBalance from "@/assets/zen-balance.jpg";
 import pastelAbstract from "@/assets/pastel-abstract.jpg";
 
@@ -109,9 +110,7 @@ const Index = () => (
       >
         <Suspense
           fallback={
-            <div className="w-full h-[400px] flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full bg-sage/10 animate-breathe" />
-            </div>
+            <div className="w-full h-[400px] flex items-center justify-center"><Loader /></div>
           }
         >
           <ZenStoneScene />
