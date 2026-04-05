@@ -47,7 +47,7 @@ const ZenStone = () => {
           distortionScale={0.3}
           temporalDistortion={0.1}
           ior={1.5}
-          color="#78350f"
+          color="#ffe0db"
           roughness={0.1}
           transmission={0.95}
         />
