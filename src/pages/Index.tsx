@@ -77,9 +77,9 @@ const Index = () => (
           initial={{ opacity: 0, filter: "blur(20px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
-          className="text-4xl md:text-7xl lg:text-8xl font-serif font-light text-foreground leading-[1.15] mb-6"
+          className="text-4xl font-bold md:text-7xl lg:text-8xl font-serif  text-foreground leading-[1.15] mb-6"
         >
-          Mindshift for Life{" "}
+          A Mindshift for Life{" "}
           <span className="text-gradient">Transformation</span>
         </motion.h1>
 
@@ -256,10 +256,10 @@ const Index = () => (
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <Link
-            to="/contact"
-            className="inline-block btn-ripple bg-sage/10 border border-sage/20 text-foreground font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 transition-all duration-500"
+            to="/booking"
+            className="inline-block bg-[#983355] btn-ripple  border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
           >
-            Begin a Conversation
+            Book an Appointment
           </Link>
         </ScrollReveal>
       </div>

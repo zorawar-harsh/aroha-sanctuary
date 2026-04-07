@@ -17,6 +17,7 @@ import Approach from "./pages/Approach";
 import Services from "./pages/Services";
 import Reflections from "./pages/Reflections";
 import Contact from "./pages/Contact";
+import Booking from "./pages/Booking";
 import Testimonial from "./pages/Testimonial";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
@@ -64,6 +65,7 @@ const App = () => {
               <Route path="/services" element={<Services />} />
               <Route path="/reflections" element={<Reflections />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/booking" element={<Booking />} />
               <Route path="/testimonial" element={<Testimonial />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="*" element={<NotFound />} />
