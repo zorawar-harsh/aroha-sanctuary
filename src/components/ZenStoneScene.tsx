@@ -8,15 +8,22 @@ const ZenStone = () => {
   const mouseRef = useRef({ x: 0, y: 0 });
 
   const geometry = useMemo(() => {
-    const geo = new THREE.IcosahedronGeometry(1.4, 4);
-    const positions = geo.attributes.position;
-    for (let i = 0; i < positions.count; i++) {
-      const x = positions.getX(i);
-      const y = positions.getY(i);
-      const z = positions.getZ(i);
-      const offset = 0.15 * Math.sin(x * 2) * Math.cos(y * 2) * Math.sin(z * 2);
-      positions.setXYZ(i, x + offset * x * 0.3, y + offset * y * 0.3, z + offset * z * 0.3);
-    }
+    // Detailed proportions for a brilliant cut diamond with many side facets
+    const points = [
+      new THREE.Vector2(0, -1.2),      // Culet (bottom point)
+      new THREE.Vector2(0.5, -0.9),    // Pavilion lower
+      new THREE.Vector2(1.0, -0.5),    // Pavilion mid
+      new THREE.Vector2(1.3, -0.15),   // Pavilion upper
+      new THREE.Vector2(1.4, 0),       // Girdle bottom
+      new THREE.Vector2(1.4, 0.05),    // Girdle mid
+      new THREE.Vector2(1.35, 0.1),    // Girdle top
+      new THREE.Vector2(1.1, 0.25),    // Crown lower
+      new THREE.Vector2(0.8, 0.45),    // Crown upper
+      new THREE.Vector2(0.5, 0.6),     // Table edge
+      new THREE.Vector2(0, 0.6)        // Table center
+    ];
+    // Use 24 segments for a rich, complex array of light-catching facets around the sides
+    const geo = new THREE.LatheGeometry(points, 24).toNonIndexed(); // Convert to non-indexed for true flat shading (facets)
     geo.computeVertexNormals();
     return geo;
   }, []);
@@ -40,16 +47,16 @@ const ZenStone = () => {
         <MeshTransmissionMaterial
           backside
           samples={6}
-          thickness={0.5}
-          chromaticAberration={0.15}
+          thickness={1.5}
+          chromaticAberration={1}
           anisotropy={0.3}
-          distortion={0.2}
-          distortionScale={0.3}
-          temporalDistortion={0.1}
-          ior={1.5}
-          color="#ffe0db"
-          roughness={0.1}
-          transmission={0.95}
+          distortion={0}
+          distortionScale={0}
+          temporalDistortion={0}
+          ior={2.4}
+          color="#ffffff"
+          roughness={0}
+          transmission={1}
         />
       </mesh>
     </Float>
@@ -68,7 +75,7 @@ const ZenStoneScene = () => (
       <directionalLight position={[5, 5, 5]} intensity={0.6} />
       <directionalLight position={[-3, 2, -3]} intensity={0.3} color="#fcd34d" />
       <ZenStone />
-      <Environment preset="studio" environmentIntensity={0.3} />
+      <Environment preset="city" environmentIntensity={1} />
     </Canvas>
   </div>
 );
