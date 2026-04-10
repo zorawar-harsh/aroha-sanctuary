@@ -64,7 +64,7 @@ const FloatingNav = () => {
       {/* Website Logo */}
       <div className="fixed top-4 left-4 md:top-6 md:left-8 z-40">
         <Link to="/">
-          <img src={arohaLogo} alt="Aroha" className="h-24 md:h-36 w-auto max-w-[65vw] object-contain mix-blend-multiply hover:scale-105 transition-all duration-300" />
+          <img src={arohaLogo} alt="Aroha" className="h-24  md:h-36 w-auto max-w-[65vw] object-contain mix-blend-multiply hover:scale-105 transition-all duration-300" />
         </Link>
       </div>
 

@@ -8,22 +8,15 @@ const ZenStone = () => {
   const mouseRef = useRef({ x: 0, y: 0 });
 
   const geometry = useMemo(() => {
-    // Detailed proportions for a brilliant cut diamond with many side facets
+    // Classic brilliant-cut diamond proportions
     const points = [
-      new THREE.Vector2(0, -1.2),      // Culet (bottom point)
-      new THREE.Vector2(0.5, -0.9),    // Pavilion lower
-      new THREE.Vector2(1.0, -0.5),    // Pavilion mid
-      new THREE.Vector2(1.3, -0.15),   // Pavilion upper
-      new THREE.Vector2(1.4, 0),       // Girdle bottom
-      new THREE.Vector2(1.4, 0.05),    // Girdle mid
-      new THREE.Vector2(1.35, 0.1),    // Girdle top
-      new THREE.Vector2(1.1, 0.25),    // Crown lower
-      new THREE.Vector2(0.8, 0.45),    // Crown upper
-      new THREE.Vector2(0.5, 0.6),     // Table edge
-      new THREE.Vector2(0, 0.6)        // Table center
+      new THREE.Vector2(0, -1.2),    // Culet (bottom point)
+      new THREE.Vector2(1.4, 0),     // Girdle (widest point)
+      new THREE.Vector2(0.8, 0.45),  // Table edge
+      new THREE.Vector2(0, 0.45)     // Table center
     ];
-    // Use 24 segments for a rich, complex array of light-catching facets around the sides
-    const geo = new THREE.LatheGeometry(points, 24).toNonIndexed(); // Convert to non-indexed for true flat shading (facets)
+    // Use 8 segments for a classic, octagonal diamond shape
+    const geo = new THREE.LatheGeometry(points, 8).toNonIndexed(); // Non-indexed for flat facets
     geo.computeVertexNormals();
     return geo;
   }, []);
@@ -48,7 +41,7 @@ const ZenStone = () => {
           backside
           samples={6}
           thickness={1.5}
-          chromaticAberration={1}
+          chromaticAberration={0.05}
           anisotropy={0.3}
           distortion={0}
           distortionScale={0}
@@ -73,9 +66,9 @@ const ZenStoneScene = () => (
     >
       <ambientLight intensity={0.4} />
       <directionalLight position={[5, 5, 5]} intensity={0.6} />
-      <directionalLight position={[-3, 2, -3]} intensity={0.3} color="#fcd34d" />
+      <directionalLight position={[-3, 2, -3]} intensity={0.3} />
       <ZenStone />
-      <Environment preset="city" environmentIntensity={1} />
+      <Environment preset="studio" environmentIntensity={1} />
     </Canvas>
   </div>
 );

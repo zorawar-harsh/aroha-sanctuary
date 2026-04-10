@@ -40,12 +40,20 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-sans text-lg font-bold text-[#1f1d1c] mb-4 uppercase tracking-wider">Connect</h4>
-          <Link
-            to="/contact"
-            className="text-lg font-semibold text-[#1f1d1c]/80 hover:text-[#94294d] hover:translate-x-1 transition-all duration-300 w-fit"
-          >
-            Get in Touch
-          </Link>
+          <div className="flex flex-col gap-2">
+            <Link
+              to="/contact"
+              className="text-lg font-semibold text-[#1f1d1c]/80 hover:text-[#94294d] hover:translate-x-1 transition-all duration-300 w-fit"
+            >
+              Get in Touch
+            </Link>
+            <a
+              href="mailto:poonam.diwan@outlook.com"
+              className="text-lg font-semibold text-[#1f1d1c]/80 hover:text-[#94294d] hover:translate-x-1 transition-all duration-300 w-fit"
+            >
+              poonam.diwan@outlook.com
+            </a>
+          </div>
         </div>
       </div>
       <div className="mt-16 pt-8 border-t border-[#1f1d1c]/10 text-center">

@@ -6,7 +6,7 @@ import ZenStoneScene from "../components/ZenStoneScene";
 import meditationHero from "@/assets/meditation-hero.jpg";
 import Loader from "../components/Loader";
 import zenBalance from "@/assets/zen-balance.jpg";
-import pastelAbstract from "@/assets/pastel-abstract.jpg";
+// import pastelAbstract from "@/assets/pastel-abstract.jpg";
 
 const services = [
   {
@@ -106,29 +106,29 @@ const Index = () => (
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, delay: 0.6 }}
-        className="relative z-10 mt-8 w-full max-w-lg mx-auto"
+        className="relative z-10 -top-20 w-full   max-w-lg mx-auto"
       >
         <Suspense
           fallback={
             <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center"><Loader /></div>
           }
         >
-          <ZenStoneScene />
+          <ZenStoneScene  />
         </Suspense>
       </motion.div>
     </section>
 
     {/* Intro with meditation image */}
-    <section className="section-padding relative overflow-hidden">
+    <section className=" -mt-44 relative overflow-hidden">
       {/* Pastel wave divider */}
-      <div className="absolute top-0 left-0 right-0 h-32 overflow-hidden">
+      {/* <div className="absolute top-0 left-0 right-0 h-32 overflow-hidden">
         <img src={pastelAbstract} alt="" className="w-full h-full object-cover opacity-30" />
-      </div>
+      </div> */}
 
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center pt-16">
         <div>
           <ScrollReveal>
-            <p className="text-xl md:text-3xl font-serif font-light text-foreground leading-relaxed mb-8">
+            <p className="text-xl md:text-3xl font-serif font-bold text-foreground leading-relaxed mb-8">
               Life doesn't always fall apart loudly.
               <br />
               <span className="text-muted-foreground">
@@ -137,12 +137,12 @@ const Index = () => (
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="text-base md:text-lg font-sans font-light text-muted-foreground leading-relaxed mb-4">
+            <p className="text-base md:text-lg font-serif font-semibold text-muted-foreground leading-relaxed mb-4">
               At Aroha, we support individuals who are navigating inner dissatisfaction or major life transitions—such as separation, divorce, career shifts, or prolonged emotional strain—to reconnect with clarity, balance, and a sense of fulfilment.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
-            <p className="text-base md:text-lg font-sans font-light text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg font-serif font-semibold text-muted-foreground leading-relaxed">
               This is a space for quiet reflection, emotional grounding, and steady inner realignment.
             </p>
           </ScrollReveal>
@@ -217,7 +217,7 @@ const Index = () => (
           <h2 className="text-3xl md:text-5xl font-serif font-light text-center text-foreground mb-4">
             Who This Is For
           </h2>
-          <p className="text-center text-muted-foreground font-sans text-base md:text-lg mb-12">
+          <p className="text-center text-[#291213] font-sans text-base md:text-lg mb-12">
             This work may be right for you if you:
           </p>
         </ScrollReveal>
