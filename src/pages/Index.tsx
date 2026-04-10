@@ -264,7 +264,13 @@ const Index = () => (
         </ScrollReveal>
       </div>
     </section>
-  </div>
+    <Link
+      to="/booking"
+      aria-label="Book a consultation"
+      className="fixed right-6 bottom-6 z-50 inline-flex items-center justify-center rounded-full bg-[#983355] px-5 py-4 text-sm font-semibold text-[#E1DAC7] shadow-[0_20px_60px_rgba(152,51,85,0.25)] transition hover:-translate-y-0.5 hover:bg-sage/90 hover:text-[#1F1E1D] focus:outline-none focus:ring-2 focus:ring-sage/50"
+    >
+      Book Consultation
+    </Link>  </div>
 );
 
 export default Index;

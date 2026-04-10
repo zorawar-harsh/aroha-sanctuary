@@ -197,4 +197,24 @@
   .section-padding {
     @apply px-6 md:px-12 lg:px-24 py-20 md:py-32;
   }
+
+  .calendly-inline-widget {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .calendly-inline-widget iframe {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 100% !important;
+    max-width: 100% !important;
+  }
+
+  @media (max-width: 640px) {
+    .calendly-inline-widget,
+    .calendly-inline-widget iframe {
+      min-height: 550px !important;
+    }
+  }
 }
