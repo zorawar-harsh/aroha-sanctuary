@@ -73,74 +73,6 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
-  /* ── Dark Theme ────────────────────────────────── */
-  .dark {
-    --background: 30 10% 10%;
-    --foreground: 36 53% 88%;
-
-    --card: 30 10% 13%;
-    --card-foreground: 36 53% 88%;
-
-    --popover: 30 10% 13%;
-    --popover-foreground: 36 53% 88%;
-
-    --primary: 100 18% 52%;
-    --primary-foreground: 30 10% 10%;
-
-    --secondary: 30 10% 18%;
-    --secondary-foreground: 36 53% 88%;
-
-    --muted: 30 8% 16%;
-    --muted-foreground: 36 53% 88%;
-
-    --accent: 33 22% 38%;
-    --accent-foreground: 36 53% 88%;
-
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 36 53% 88%;
-
-    --border: 30 8% 20%;
-    --input: 30 8% 20%;
-    --ring: 100 18% 52%;
-
-    /* Custom tokens – dark */
-    --sage: 100 18% 52%;
-    --sage-light: 100 15% 65%;
-    --sage-dark: 100 18% 38%;
-    --cream: 30 10% 10%;
-    --cream-warm: 30 10% 12%;
-    --clay: 33 22% 42%;
-    --clay-dark: 33 20% 32%;
-    --fog: 30 8% 16%;
-    --earth: 38 20% 88%;
-    --earth-light: 38 15% 60%;
-
-    /* Pastel accents – muted for dark */
-    --pastel-rose: 350 30% 40%;
-    --pastel-lavender: 270 20% 40%;
-    --pastel-peach: 25 35% 42%;
-    --pastel-mint: 150 18% 38%;
-    --pastel-sky: 200 25% 38%;
-
-    /* Glassmorphism – dark */
-    --glass-bg: 30 10% 13% / 0.7;
-    --glass-border: 30 8% 25% / 0.4;
-    --glass-blur: 20px;
-
-    /* Shadows – dark */
-    --shadow-soft: 0 4px 30px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 40px hsl(100 18% 52% / 0.2);
-
-    --sidebar-background: 30 10% 11%;
-    --sidebar-foreground: 38 20% 80%;
-    --sidebar-primary: 100 18% 52%;
-    --sidebar-primary-foreground: 30 10% 10%;
-    --sidebar-accent: 30 10% 16%;
-    --sidebar-accent-foreground: 38 20% 80%;
-    --sidebar-border: 30 8% 20%;
-    --sidebar-ring: 100 18% 52%;
-  }
 }
 
 @layer base {
@@ -149,8 +81,24 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply text-foreground font-sans antialiased;
+    background-color: transparent;
     cursor: none;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #852916;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #852916 20px), repeating-linear-gradient(#766e7055, #766e70);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    opacity: 0.2;
   }
 
   h1, h2, h3, h4, h5, h6 {

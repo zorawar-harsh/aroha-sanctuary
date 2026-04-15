@@ -21,8 +21,6 @@ import Booking from "./pages/Booking";
 import Testimonial from "./pages/Testimonial";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
-import { ThemeProvider } from "./hooks/use-theme";
-
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -36,21 +34,20 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <AnimatePresence>
-          {loading && (
-            <motion.div
-              key="loader"
-              className="fixed inset-0 z-[9999] flex items-center justify-center bg-cream-warm dark:bg-zinc-900"
-              exit={{ y: "-100vh" }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <Loader />
-            </motion.div>
-          )}
-        </AnimatePresence>
+      <AnimatePresence>
+        {loading && (
+          <motion.div
+            key="loader"
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-cream-warm"
+            exit={{ y: "-100vh" }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <Loader />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-        <TooltipProvider>
+      <TooltipProvider>
           <Toaster />
           <Sonner />
           <BrowserRouter>
@@ -73,7 +70,6 @@ const App = () => {
             <Footer />
           </BrowserRouter>
         </TooltipProvider>
-      </ThemeProvider>
     </QueryClientProvider>
   );
 };

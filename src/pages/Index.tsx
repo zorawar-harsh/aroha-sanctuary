@@ -7,6 +7,7 @@ import meditationHero from "@/assets/meditation-hero.jpg";
 import Loader from "../components/Loader";
 import zenBalance from "@/assets/zen-balance.jpg";
 // import pastelAbstract from "@/assets/pastel-abstract.jpg";
+import poonam from "@/assets/poonam-diwan.jpeg";
 
 const services = [
   {
@@ -47,7 +48,7 @@ const Index = () => (
     {/* Hero */}
     <section className="min-h-screen flex flex-col items-center justify-center section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-cream-warm/50 via-background to-background" />
-      
+
       {/* Pastel floating elements */}
       {pastelDots.map((dot, i) => (
         <motion.div
@@ -63,69 +64,69 @@ const Index = () => (
       <div className="absolute top-40 right-20 w-96 h-96 rounded-full bg-pastel-lavender/10 blur-3xl" />
       <div className="absolute bottom-20 left-1/3 w-80 h-80 rounded-full bg-pastel-mint/12 blur-3xl" />
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-sm md:text-base font-sans uppercase tracking-[0.3em] text-muted-foreground mb-8"
+      <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center px-4 md:px-8">
+        {/* Left Side: Image / ZenStoneScene */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.6 }}
+          className="relative z-10 w-full flex justify-center md:justify-end order-2 md:order-1"
         >
-          Inner Balance & Life Transitions
-        </motion.p>
+          <Suspense
+            fallback={
+              <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center"><Loader /></div>
+            }
+          >
+            <div className="w-full max-w-md lg:max-w-lg pb-12 md:pb-0 mx-auto">
+              {/* <ZenStoneScene /> */}
+              <img src={poonam} alt="Mindshift Therapy session" className="w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl" loading="lazy" />
+            </div>
+          </Suspense>
+        </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, filter: "blur(20px)" }}
-          animate={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
-          className="text-4xl font-bold md:text-7xl lg:text-8xl font-serif  text-foreground leading-[1.15] mb-6"
-        >
-          A Mindshift for Life{" "}
-          <span className="text-gradient">Transformation</span>
-        </motion.h1>
+        {/* Right Side: Text Content */}
+        <div className="text-center md:text-left order-1 md:order-2">
+              <motion.h1
+            initial={{ opacity: 0, filter: "blur(20px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
+            className="text-4xl font-bold md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.15] mb-6"
+          > Uncover What’s Holding You Back and Move Forward with Confidence     
+            
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-lg md:text-xl font-sans font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed"
-        >
-          Supporting individuals through inner dissatisfaction and major life changes with clarity, calm, and care.
-        </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, filter: "blur(20px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
+            className="text-4xl font-bold md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.15] mb-6"
+          > Build self-awareness, emotional strength, and healthier, more fulfilling connections in your life     
+            
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.3 }}
-          className="text-sm md:text-base font-sans text-muted-foreground/70 mt-4 italic"
+         
+
+    <div className="max-w-2xl mx-auto text-center relative z-10">
+        
+        <Link
+          to="/booking"
+          className="inline-block right-44  bg-[#983355] btn-ripple  border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
         >
-          A gentle space to pause, reflect, and find your way forward.
-        </motion.p>
+          Book an Appointment
+        </Link>
+    </div>
+        </div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.6 }}
-        className="relative z-10 -top-20 w-full   max-w-lg mx-auto"
-      >
-        <Suspense
-          fallback={
-            <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center"><Loader /></div>
-          }
-        >
-          <ZenStoneScene  />
-        </Suspense>
-      </motion.div>
     </section>
 
     {/* Intro with meditation image */}
-    <section className=" -mt-44 relative overflow-hidden">
+    <section className=" relative overflow-hidden">
       {/* Pastel wave divider */}
       {/* <div className="absolute top-0 left-0 right-0 h-32 overflow-hidden">
         <img src={pastelAbstract} alt="" className="w-full h-full object-cover opacity-30" />
       </div> */}
 
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center pt-16">
+      <div className="max-w-5xl mx-auto  grid md:grid-cols-2 gap-12 items-center pt-16">
         <div>
           <ScrollReveal>
             <p className="text-xl md:text-3xl font-serif font-bold text-foreground leading-relaxed mb-8">
@@ -246,31 +247,15 @@ const Index = () => (
         <div className="w-[500px] h-[500px] rounded-full bg-gradient-to-br from-pastel-rose/10 via-pastel-lavender/10 to-pastel-mint/10 blur-3xl" />
       </div>
 
-      <div className="max-w-2xl mx-auto text-center relative z-10">
-        <ScrollReveal>
-          <p className="text-xl md:text-3xl font-serif font-light text-foreground leading-relaxed mb-8">
-            If this resonates with you,
-            <br />
-            you're welcome to explore further or reach out when it feels right.
-          </p>
-        </ScrollReveal>
-        <ScrollReveal delay={0.2}>
-          <Link
-            to="/booking"
-            className="inline-block bg-[#983355] btn-ripple  border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
-          >
-            Book an Appointment
-          </Link>
-        </ScrollReveal>
-      </div>
     </section>
-    <Link
+    {/* <Link
       to="/booking"
       aria-label="Book a consultation"
       className="fixed right-6 bottom-6 z-50 inline-flex items-center justify-center rounded-full bg-[#983355] px-5 py-4 text-sm font-semibold text-[#E1DAC7] shadow-[0_20px_60px_rgba(152,51,85,0.25)] transition hover:-translate-y-0.5 hover:bg-sage/90 hover:text-[#1F1E1D] focus:outline-none focus:ring-2 focus:ring-sage/50"
     >
       Book Consultation
-    </Link>  </div>
+    </Link>   */}
+    </div>
 );
 
 export default Index;
