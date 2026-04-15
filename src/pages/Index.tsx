@@ -2,11 +2,9 @@ import { Suspense } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ScrollReveal from "../components/ScrollReveal";
-import ZenStoneScene from "../components/ZenStoneScene";
 import meditationHero from "@/assets/meditation-hero.jpg";
 import Loader from "../components/Loader";
 import zenBalance from "@/assets/zen-balance.jpg";
-// import pastelAbstract from "@/assets/pastel-abstract.jpg";
 import poonam from "@/assets/poonam-diwan.jpeg";
 
 const services = [
@@ -45,11 +43,12 @@ const pastelDots = [
 
 const Index = () => (
   <div className="min-h-screen">
-    {/* Hero */}
+
+    {/* ── Hero ── */}
     <section className="min-h-screen flex flex-col items-center justify-center section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-cream-warm/50 via-background to-background" />
 
-      {/* Pastel floating elements */}
+      {/* Floating pastel dots */}
       {pastelDots.map((dot, i) => (
         <motion.div
           key={i}
@@ -65,7 +64,8 @@ const Index = () => (
       <div className="absolute bottom-20 left-1/3 w-80 h-80 rounded-full bg-pastel-mint/12 blur-3xl" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center px-4 md:px-8">
-        {/* Left Side: Image / ZenStoneScene */}
+
+        {/* Left: Photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -78,55 +78,56 @@ const Index = () => (
             }
           >
             <div className="w-full max-w-md lg:max-w-lg pb-12 md:pb-0 mx-auto">
-              {/* <ZenStoneScene /> */}
-              <img src={poonam} alt="Mindshift Therapy session" className="w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl" loading="lazy" />
+              <img
+                src={poonam}
+                alt="Mindshift Therapy session"
+                className="w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
+                loading="lazy"
+              />
             </div>
           </Suspense>
         </motion.div>
 
-        {/* Right Side: Text Content */}
+        {/* Right: Text */}
         <div className="text-center md:text-left order-1 md:order-2">
-              <motion.h1
-            initial={{ opacity: 0, filter: "blur(20px)" }}
-            animate={{ opacity: 1, filter: "blur(0px)" }}
-            transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
-            className="text-4xl font-bold md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.15] mb-6"
-          > Uncover What’s Holding You Back and Move Forward with Confidence     
-            
-          </motion.h1>
-
           <motion.h1
             initial={{ opacity: 0, filter: "blur(20px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
             className="text-4xl font-bold md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.15] mb-6"
-          > Build self-awareness, emotional strength, and healthier, more fulfilling connections in your life     
-            
+          >
+            Uncover What's Holding You Back and Move Forward with Confidence
           </motion.h1>
 
-         
+          <motion.h2
+            initial={{ opacity: 0, filter: "blur(20px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.4, delay: 0.6, ease: "easeOut" }}
+            className="text-2xl font-medium md:text-3xl font-serif text-muted-foreground leading-relaxed mb-10"
+          >
+            Build self-awareness, emotional strength, and healthier, more fulfilling connections in your life
+          </motion.h2>
 
-    <div className="max-w-2xl mx-auto text-center relative z-10">
-        
-        <Link
-          to="/booking"
-          className="inline-block right-44  bg-[#983355] btn-ripple  border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
-        >
-          Book an Appointment
-        </Link>
-    </div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
+            <Link
+              to="/connect"
+              id="hero-book-btn"
+              className="inline-block bg-[#983355] btn-ripple border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
+            >
+              Book an Appointment
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
 
-    {/* Intro with meditation image */}
-    <section className=" relative overflow-hidden">
-      {/* Pastel wave divider */}
-      {/* <div className="absolute top-0 left-0 right-0 h-32 overflow-hidden">
-        <img src={pastelAbstract} alt="" className="w-full h-full object-cover opacity-30" />
-      </div> */}
-
-      <div className="max-w-5xl mx-auto  grid md:grid-cols-2 gap-12 items-center pt-16">
+    {/* ── Intro with meditation image ── */}
+    <section className="relative overflow-hidden">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center pt-16">
         <div>
           <ScrollReveal>
             <p className="text-xl md:text-3xl font-serif font-bold text-foreground leading-relaxed mb-8">
@@ -139,7 +140,9 @@ const Index = () => (
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="text-base md:text-lg font-serif font-semibold text-muted-foreground leading-relaxed mb-4">
-              At Aroha, we support individuals who are navigating inner dissatisfaction or major life transitions—such as separation, divorce, career shifts, or prolonged emotional strain—to reconnect with clarity, balance, and a sense of fulfilment.
+              At Aroha, we support individuals who are navigating inner dissatisfaction or major life
+              transitions—such as separation, divorce, career shifts, or prolonged emotional strain—to
+              reconnect with clarity, balance, and a sense of fulfilment.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
@@ -164,7 +167,7 @@ const Index = () => (
       </div>
     </section>
 
-    {/* How I Work - Cards with pastel accents */}
+    {/* ── How I Work ── */}
     <section className="section-padding bg-fog/30 relative overflow-hidden">
       <div className="absolute top-10 right-10 w-40 h-40 rounded-full bg-pastel-sky/15 blur-2xl" />
       <div className="absolute bottom-10 left-10 w-56 h-56 rounded-full bg-pastel-peach/15 blur-2xl" />
@@ -196,7 +199,7 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Zen image divider */}
+    {/* ── Zen image divider ── */}
     <section className="relative h-64 md:h-80 overflow-hidden">
       <img
         src={zenBalance}
@@ -209,7 +212,7 @@ const Index = () => (
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
     </section>
 
-    {/* Who This Is For */}
+    {/* ── Who This Is For ── */}
     <section className="section-padding relative overflow-hidden">
       <div className="absolute top-1/2 left-0 w-64 h-64 rounded-full bg-pastel-lavender/10 blur-3xl -translate-y-1/2" />
 
@@ -241,21 +244,14 @@ const Index = () => (
       </div>
     </section>
 
-    {/* CTA */}
+    {/* ── CTA ── */}
     <section className="section-padding bg-gradient-to-b from-background to-fog/30 relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-[500px] h-[500px] rounded-full bg-gradient-to-br from-pastel-rose/10 via-pastel-lavender/10 to-pastel-mint/10 blur-3xl" />
       </div>
-
     </section>
-    {/* <Link
-      to="/booking"
-      aria-label="Book a consultation"
-      className="fixed right-6 bottom-6 z-50 inline-flex items-center justify-center rounded-full bg-[#983355] px-5 py-4 text-sm font-semibold text-[#E1DAC7] shadow-[0_20px_60px_rgba(152,51,85,0.25)] transition hover:-translate-y-0.5 hover:bg-sage/90 hover:text-[#1F1E1D] focus:outline-none focus:ring-2 focus:ring-sage/50"
-    >
-      Book Consultation
-    </Link>   */}
-    </div>
+
+  </div>
 );
 
 export default Index;

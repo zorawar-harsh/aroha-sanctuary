@@ -39,12 +39,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 max-w-4xl mx-auto">
+    <div className="min-h-screen flex flex-col justify-center items-center pt-28 pb-20 px-6 w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden"
+        className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden w-full max-w-xl"
       >
         <div className="relative z-10">
           <h1 className="text-3xl md:text-4xl font-serif text-amber-950 dark:text-[#F1E4D1] mb-6 text-center">Get in Touch</h1>
@@ -52,7 +52,7 @@ const Contact = () => {
             I am here to hold space for you. Send me a message, and I'll get back to you as soon as I can.
           </p>
           
-          <form onSubmit={onSubmit} className="flex flex-col gap-6 max-w-md mx-auto">
+          <form onSubmit={onSubmit} className="flex flex-col gap-6 max-w-md mx-auto w-full">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-amber-950 dark:text-[#F1E4D1] mb-2">Name</label>
               <input 

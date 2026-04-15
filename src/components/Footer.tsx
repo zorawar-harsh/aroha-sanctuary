@@ -42,10 +42,10 @@ const Footer = () => (
           <h4 className="font-sans text-lg font-bold text-[#1f1d1c] mb-4 uppercase tracking-wider">Connect</h4>
           <div className="flex flex-col gap-2">
             <Link
-              to="/contact"
+              to="/connect"
               className="text-lg font-semibold text-[#1f1d1c]/80 hover:text-[#94294d] hover:translate-x-1 transition-all duration-300 w-fit"
             >
-              Get in Touch
+              Book &amp; Connect
             </Link>
             <a
               href="mailto:poonam.diwan@outlook.com"

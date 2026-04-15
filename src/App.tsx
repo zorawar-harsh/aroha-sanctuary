@@ -11,13 +11,13 @@ import ScrollProgress from "./components/ScrollProgress";
 import CustomCursor from "./components/CustomCursor";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
+import { Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Approach from "./pages/Approach";
 import Services from "./pages/Services";
 import Reflections from "./pages/Reflections";
-import Contact from "./pages/Contact";
-import Booking from "./pages/Booking";
+import BookAndConnect from "./pages/BookAndConnect";
 import Testimonial from "./pages/Testimonial";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
@@ -61,8 +61,10 @@ const App = () => {
               <Route path="/approach" element={<Approach />} />
               <Route path="/services" element={<Services />} />
               <Route path="/reflections" element={<Reflections />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/booking" element={<Booking />} />
+              <Route path="/connect" element={<BookAndConnect />} />
+              {/* Legacy redirects */}
+              <Route path="/booking" element={<Navigate to="/connect" replace />} />
+              <Route path="/contact" element={<Navigate to="/connect" replace />} />
               <Route path="/testimonial" element={<Testimonial />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="*" element={<NotFound />} />
