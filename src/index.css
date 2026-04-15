@@ -81,8 +81,7 @@
   }
 
   body {
-    @apply text-foreground font-sans antialiased;
-    background-color: transparent;
+    @apply bg-background text-foreground font-sans antialiased;
     cursor: none;
     min-height: 100vh;
     position: relative;
@@ -94,11 +93,12 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background-color: #852916;
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #852916 20px), repeating-linear-gradient(#766e7055, #766e70);
-    background-repeat: repeat;
-    background-attachment: fixed;
-    opacity: 0.2;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--cream-warm) / 0.5) 0%,
+      hsl(var(--background)) 50%,
+      hsl(var(--background)) 100%
+    );
   }
 
   h1, h2, h3, h4, h5, h6 {
