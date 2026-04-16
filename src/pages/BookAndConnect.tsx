@@ -64,7 +64,7 @@ export const CalendlyPopup = ({
             {/* Header strip */}
             <div className="px-8 pt-6 pb-4 border-b border-amber-900/10">
               <h2 className="text-xl font-serif text-amber-950 dark:text-[#F1E4D1] font-semibold">
-                Book Your Appointment
+                Book A Session
               </h2>
               <p className="text-sm text-muted-foreground mt-0.5">
                 Choose a time that works best for you.
