@@ -208,12 +208,12 @@ const Index = () => (
 
     {/* <AboutMe/> */}
 
-      <div className="w-full h-[1px] bg-black" ></div>
+    <div className="w-full h-[1px] bg-black" ></div>
 
-    <KnowYourTherapist/>
+    <KnowYourTherapist />
 
     {/* ── Zen image divider ── */}
-    <section className="relative h-64 md:h-80 overflow-hidden">
+    {/* <section className="relative h-64 md:h-80 overflow-hidden">
       <img
         src={zenBalance}
         alt="Zen stones and lotus"
@@ -223,10 +223,10 @@ const Index = () => (
         height={600}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
-    </section>
+    </section> */}
 
     {/* ── Who This Is For ── */}
-    <section className="section-padding relative overflow-hidden">
+    {/* <section className="section-padding relative overflow-hidden">
       <div className="absolute top-1/2 left-0 w-64 h-64 rounded-full bg-pastel-lavender/10 blur-3xl -translate-y-1/2" />
 
       <div className="max-w-3xl mx-auto relative z-10">
@@ -255,10 +255,28 @@ const Index = () => (
           })}
         </div>
       </div>
+    </section> */}
+
+    <section className="py-16 md:py-24 px-6 relative z-10">
+      <div className="max-w-4xl mx-auto text-center">
+        <ScrollReveal>
+          <div className="bg-white/40 backdrop-blur-xl p-10 md:p-14 relative overflow-hidden border border-[#b37e73]/20 rounded-3xl shadow-lg">
+            {/* Decorative gradient accents */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full blur-3xl" />
+            
+            <p className="relative z-10 text-2xl md:text-3xl font-serif text-[#511820] leading-relaxed italic">
+              Poonam Diwan supports individuals through emotional and personal challenges with
+              practical guidance and empathetic understanding—helping them gain clarity, feel more in
+              control, and move forward with confidence.
+            </p>
+          </div>
+        </ScrollReveal>
+      </div>
     </section>
 
     {/* ── CTA ── */}
-    <section className="section-padding bg-gradient-to-b from-background to-fog/30 relative overflow-hidden">
+    <section className="section-padding  bg-gradient-to-b from-background to-fog/30 relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-[500px] h-[500px] rounded-full bg-gradient-to-br from-pastel-rose/10 via-pastel-lavender/10 to-pastel-mint/10 blur-3xl" />
       </div>

@@ -222,7 +222,7 @@ const BookAndConnect = () => {
                   }}
                 />
               ) : (
-                <div className="flex h-full items-center justify-center rounded-3xl bg-slate-50/40 dark:bg-slate-900/40 min-h-[560px]">
+                <div className="flex h-full items-center justify-center rounded-3xl bg-[#F1E4D1]/40 dark:bg-[#2A1A17]/40 min-h-[560px]">
                   <Loader />
                 </div>
               )}

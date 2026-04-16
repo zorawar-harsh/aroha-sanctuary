@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import arohaLogo from "@/assets/aroha-logo.jpeg";
+import { FaWhatsapp } from 'react-icons/fa';
+
 
 const Footer = () => (
   <footer className=" h-[450px] py-20  px-6 bg-[#4a0e15] border-t border-white/10 relative overflow-hidden">
@@ -28,7 +30,7 @@ const Footer = () => (
             {[
               { label: "Home", path: "/" },
               { label: "About", path: "/about" },
-              { label: "How I Work", path: "/approach" },
+              // { label: "How I Work", path: "/approach" },
               { label: "Services", path: "/services" },
               { label: "Privacy Policy", path: "/privacy-policy" },
             ].map((item) => (
@@ -58,6 +60,13 @@ const Footer = () => (
               className="text-base font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
             >
               &#9993; poonam.diwan@outlook.com
+            </a>
+            <a
+              href="https://wa.me/919899630959"
+              className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
+            >
+              <FaWhatsapp className="size-4" />
+              <span>WhatsApp</span>
             </a>
           </div>
         </div>

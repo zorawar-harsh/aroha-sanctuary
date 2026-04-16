@@ -7,9 +7,9 @@ import arohaLogo from "@/assets/aroha-logo.jpeg";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "Working", path: "/approach" },
+  // { label: "Working", path: "/approach" },
   { label: "Services", path: "/services" },
-  { label: "Reflections", path: "/reflections" },
+  // { label: "Reflections", path: "/reflections" },
   { label: "Book & Connect", path: "/connect" },
   { label: "Testimonial", path: "/testimonial" },
   { label: "Blog", path: "/blog" },

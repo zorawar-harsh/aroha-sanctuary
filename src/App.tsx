@@ -16,7 +16,6 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Approach from "./pages/Approach";
 import Services from "./pages/Services";
-import Reflections from "./pages/Reflections";
 import BookAndConnect from "./pages/BookAndConnect";
 import Testimonial from "./pages/Testimonial";
 import Blog from "./pages/Blog";
@@ -60,9 +59,8 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<AboutMe />} />
-              <Route path="/approach" element={<Approach />} />
+              {/* <Route path="/approach" element={<Approach />} /> */}
               <Route path="/services" element={<Services />} />
-              <Route path="/reflections" element={<Reflections />} />
               <Route path="/connect" element={<BookAndConnect />} />
               {/* Legacy redirects */}
               <Route path="/booking" element={<Navigate to="/connect" replace />} />

@@ -81,7 +81,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply text-foreground font-sans antialiased;
+    background-color: #F4F0EB;
     cursor: none;
     min-height: 100vh;
     position: relative;
@@ -93,12 +94,9 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: linear-gradient(
-      to bottom,
-      hsl(var(--cream-warm) / 0.5) 0%,
-      hsl(var(--background)) 50%,
-      hsl(var(--background)) 100%
-    );
+    opacity: 0.1;
+    background-image: radial-gradient(circle at center center, #b37e73, #F4F0EB), repeating-radial-gradient(circle at center center, #b37e73, #b37e73, 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
   }
 
   h1, h2, h3, h4, h5, h6 {
