@@ -206,7 +206,7 @@ const BookAndConnect = () => {
               with my calendar.
             </p>
 
-            <div className="w-full min-w-0 bg-transparent rounded-3xl overflow-hidden min-h-[560px] h-[calc(100vh-14rem)] max-h-[900px] sm:min-h-[640px]">
+            <div className="w-full min-w-0 bg-transparent rounded-3xl overflow-hidden min-h-[420px] sm:min-h-[520px] h-auto">
               {showInlineCalendly ? (
                 <InlineWidget
                   url={CALENDLY_URL}
@@ -232,7 +232,7 @@ const BookAndConnect = () => {
       </section>
 
       {/* ── Divider ── */}
-      <div className="max-w-5xl mx-auto px-8 mb-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 mb-20">
         <div className="relative flex items-center gap-4">
           <div className="flex-1 h-px bg-amber-900/15" />
           <span className="text-xs uppercase tracking-[0.3em] text-[#521920] dark:text-[#F1E4D1]/40 font-serif">
@@ -314,7 +314,7 @@ const BookAndConnect = () => {
                 <div>
                   <label
                     htmlFor="contact-email"
-                    className="block text-sm font-semibold text-amber-950 dark:text-[#F1E4D1] mb-1.5"
+                    className="block text-sm font-semibold text-[#521920] dark:text-[#F1E4D1] mb-1.5"
                   >
                     Email
                   </label>
@@ -353,7 +353,7 @@ const BookAndConnect = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center justify-center gap-2 w-full bg-[#521920] text-white py-3.5 px-8 rounded-xl hover:bg-amber-950 transition-colors disabled:opacity-70 disabled:cursor-not-allowed font-semibold text-base mt-1 shadow-sm"
+                  className="inline-flex items-center justify-center gap-2 w-full bg-[#521920] text-white py-3.5 px-8 rounded-xl hover:bg-[#521920] transition-colors disabled:opacity-70 disabled:cursor-not-allowed font-semibold text-base mt-1 shadow-sm"
                 >
                   <Send size={16} />
                   {isSubmitting ? "Sending…" : "Send Message"}
@@ -366,7 +366,7 @@ const BookAndConnect = () => {
                     className={`text-center text-sm ${
                       formResult.includes("sent")
                         ? "text-green-700 dark:text-green-400"
-                        : "text-amber-900 dark:text-[#F1E4D1]"
+                        : "text-[#521920] dark:text-[#F1E4D1]"
                     }`}
                   >
                     {formResult}

@@ -56,10 +56,7 @@ const Services = () => {
         <div className="flex flex-col md:flex-row gap-12 items-center mb-20">
           <div className="w-full md:w-1/3">
             <div className="aspect-[3/4] bg-slate-200 rounded-2xl overflow-hidden shadow-xl">
-              <img src={poonam} alt="Poonam" />
-              <div className="w-full h-full flex items-center justify-center text-slate-400">
-                [ Photo of Poonam ]
-              </div>
+              <img src={poonam} alt="Poonam" className="h-full w-full object-cover" />
             </div>
           </div>
 

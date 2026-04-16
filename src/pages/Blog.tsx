@@ -49,13 +49,13 @@ const Blog = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-amber-900 dark:text-[#F1E4D1] mb-6 flex items-center justify-center gap-2">
+            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-[#521920] dark:text-[#F1E4D1] mb-6 flex items-center justify-center gap-2">
               <BookOpen size={16} /> Journal
             </p>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-amber-950 dark:text-[#F1E4D1] mb-6">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#521920] dark:text-[#F1E4D1] mb-6">
               Reflections on Growth
             </h1>
-            <p className="text-base md:text-lg font-sans font-medium text-amber-900/80 dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg font-sans font-medium text-[#521920] dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
               Gentle guidance, thoughtful inquiries, and practical tools to support your emotional landscape and daily living.
             </p>
           </div>
@@ -69,7 +69,7 @@ const Blog = () => {
               >
                 {/* Image Container with Micro-interaction Zoom */}
                 <div className="h-64 overflow-hidden relative">
-                  <div className="absolute top-4 left-4 z-10 bg-white/90 dark:bg-[#1a1816]/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-amber-950 dark:text-[#F1E4D1] shadow-sm transform group-hover:-translate-y-1 transition-transform duration-300">
+                  <div className="absolute top-4 left-4 z-10 bg-white/90 dark:bg-[#1a1816]/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#521920] dark:text-[#F1E4D1] shadow-sm transform group-hover:-translate-y-1 transition-transform duration-300">
                     {post.category}
                   </div>
                   <motion.img 
