@@ -2,40 +2,40 @@ import { Link } from "react-router-dom";
 import arohaLogo from "@/assets/aroha-logo.jpeg";
 
 const Footer = () => (
-  <footer className="py-8 px-6 bg-[#983254] border-t border-white/10 relative overflow-hidden">
+  <footer className=" h-[450px] py-20  px-6 bg-[#4a0e15] border-t border-white/10 relative overflow-hidden">
     {/* Decorative blobs */}
     <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#d1b2bc]/40 blur-3xl -translate-x-1/2 -translate-y-1/2" />
     <div className="absolute bottom-0 right-0 w-48 h-48 rounded-full bg-[#c4b3ab]/40 blur-3xl translate-x-1/4 translate-y-1/4" />
 
     <div className="max-w-5xl mx-auto relative z-10">
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-3 gap-10">
 
         {/* Brand */}
         <div>
           <img src={arohaLogo} alt="Aroha" className="h-20 w-auto mix-blend-multiply mb-3" />
-          <p className="text-sm font-semibold text-white/90 leading-relaxed">
+          <p className="text-base font-semibold text-white/90 leading-relaxed">
             Inner Balance &amp; Life Transitions
           </p>
-          <p className="text-sm font-medium text-white/70 mt-1 leading-relaxed">
+          <p className="text-base font-medium text-white/70 mt-1 leading-relaxed">
             A calm space for reflection, clarity, and emotional grounding.
           </p>
         </div>
 
         {/* Navigate */}
         <div>
-          <h4 className="font-sans text-sm font-bold text-white mb-3 uppercase tracking-wider">Navigate</h4>
+          <h4 className="font-sans text-base font-bold text-white mb-3 uppercase tracking-wider">Navigate</h4>
           <div className="flex flex-col gap-1.5">
             {[
               { label: "Home", path: "/" },
               { label: "About", path: "/about" },
               { label: "How I Work", path: "/approach" },
               { label: "Services", path: "/services" },
-              { label: "Reflections", path: "/reflections" },
+              { label: "Privacy Policy", path: "/privacy-policy" },
             ].map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
+                className="text-base font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
               >
                 {item.label}
               </Link>
@@ -45,19 +45,19 @@ const Footer = () => (
 
         {/* Connect */}
         <div>
-          <h4 className="font-sans text-sm font-bold text-white mb-3 uppercase tracking-wider">Connect</h4>
+          <h4 className="font-sans text-base font-bold text-white mb-3 uppercase tracking-wider">Connect</h4>
           <div className="flex flex-col gap-1.5">
             <Link
               to="/connect"
-              className="text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
+              className="text-base font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
             >
-              Book &amp; Connect
+              Book &amp; Contact
             </Link>
             <a
               href="mailto:poonam.diwan@outlook.com"
-              className="text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
+              className="text-base font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
             >
-              poonam.diwan@outlook.com
+              &#9993; poonam.diwan@outlook.com
             </a>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Footer = () => (
 
       {/* Copyright */}
       <div className="mt-8 pt-5 border-t border-white/10 text-center">
-        <p className="text-xs font-bold text-white/60">
+        <p className="text-sm font-bold text-white/60">
           © {new Date().getFullYear()} Aroha. All rights reserved.
         </p>
       </div>

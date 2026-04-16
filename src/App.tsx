@@ -21,6 +21,8 @@ import BookAndConnect from "./pages/BookAndConnect";
 import Testimonial from "./pages/Testimonial";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import AboutMe from "./components/AboutMe";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -57,7 +59,7 @@ const App = () => {
             <FloatingNav />
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={<AboutMe />} />
               <Route path="/approach" element={<Approach />} />
               <Route path="/services" element={<Services />} />
               <Route path="/reflections" element={<Reflections />} />
@@ -67,6 +69,7 @@ const App = () => {
               <Route path="/contact" element={<Navigate to="/connect" replace />} />
               <Route path="/testimonial" element={<Testimonial />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

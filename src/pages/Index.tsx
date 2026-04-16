@@ -6,6 +6,8 @@ import meditationHero from "@/assets/meditation-hero.jpg";
 import Loader from "../components/Loader";
 import zenBalance from "@/assets/zen-balance.jpg";
 import poonam from "@/assets/poonam-diwan.jpeg";
+import AboutMe from "@/components/AboutMe";
+import KnowYourTherapist from "@/components/KnowYourTherapist";
 
 const services = [
   {
@@ -63,7 +65,7 @@ const Index = () => (
       <div className="absolute top-40 right-20 w-96 h-96 rounded-full bg-pastel-lavender/10 blur-3xl" />
       <div className="absolute bottom-20 left-1/3 w-80 h-80 rounded-full bg-pastel-mint/12 blur-3xl" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center px-4 md:px-8">
+      <div className=" -mt-10 relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center px-4 md:px-8">
 
         {/* Left: Photo */}
         <motion.div
@@ -78,12 +80,15 @@ const Index = () => (
             }
           >
             <div className="w-full max-w-md lg:max-w-lg pb-12 md:pb-0 mx-auto">
-              <img
-                src={poonam}
-                alt="Mindshift Therapy session"
-                className="w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
-                loading="lazy"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 -translate-x-24 -translate-y-12 rounded-[32px] bg-[#521920] shadow-2xl" aria-hidden="true" />
+                <img
+                  src={poonam}
+                  alt="Mindshift Therapy session"
+                  className="relative w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </Suspense>
         </motion.div>
@@ -116,9 +121,9 @@ const Index = () => (
             <Link
               to="/connect"
               id="hero-book-btn"
-              className="inline-block bg-[#983355] btn-ripple border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
+              className="inline-block bg-[#4a0e15] btn-ripple border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
             >
-              Book an Appointment
+              Book a Session
             </Link>
           </motion.div>
         </div>
@@ -126,7 +131,7 @@ const Index = () => (
     </section>
 
     {/* ── Intro with meditation image ── */}
-    <section className="relative overflow-hidden">
+    {/* <section className="relative overflow-hidden">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center pt-16">
         <div>
           <ScrollReveal>
@@ -165,10 +170,10 @@ const Index = () => (
           </div>
         </ScrollReveal>
       </div>
-    </section>
+    </section> */}
 
     {/* ── How I Work ── */}
-    <section className="section-padding bg-fog/30 relative overflow-hidden">
+    {/* <section className="section-padding bg-fog/30 relative overflow-hidden">
       <div className="absolute top-10 right-10 w-40 h-40 rounded-full bg-pastel-sky/15 blur-2xl" />
       <div className="absolute bottom-10 left-10 w-56 h-56 rounded-full bg-pastel-peach/15 blur-2xl" />
 
@@ -197,7 +202,15 @@ const Index = () => (
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
+
+    {/* about me section */}
+
+    {/* <AboutMe/> */}
+
+      <div className="w-full h-[1px] bg-black" ></div>
+
+    <KnowYourTherapist/>
 
     {/* ── Zen image divider ── */}
     <section className="relative h-64 md:h-80 overflow-hidden">

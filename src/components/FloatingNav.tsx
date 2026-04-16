@@ -24,7 +24,7 @@ const FloatingNav = () => {
   return (
     <>
       <motion.nav
-        className="fixed inset-x-0 top-0 z-50 bg-[#94294d]/95 backdrop-blur-xl border-b border-[#1f1d1c]/30 shadow-lg"
+        className="fixed inset-x-0 top-0 z-50 bg-[#4a0e15]/95 backdrop-blur-xl border-b border-[#1f1d1c]/30 shadow-lg"
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
