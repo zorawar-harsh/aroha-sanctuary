@@ -56,14 +56,14 @@ export const CalendlyPopup = ({
             <button
               onClick={onClose}
               aria-label="Close booking calendar"
-              className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-amber-900/10 hover:bg-amber-900/20 text-amber-950 dark:text-[#F1E4D1] transition-colors"
+              className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-amber-900/10 hover:bg-amber-900/20 text-[#521920] dark:text-[#F1E4D1] transition-colors"
             >
               <X size={18} />
             </button>
 
             {/* Header strip */}
             <div className="px-8 pt-6 pb-4 border-b border-amber-900/10">
-              <h2 className="text-xl font-serif text-amber-950 dark:text-[#F1E4D1] font-semibold">
+              <h2 className="text-xl font-serif text-[#521920] dark:text-[#F1E4D1] font-semibold">
                 Book A Session
               </h2>
               <p className="text-sm text-muted-foreground mt-0.5">
@@ -150,10 +150,10 @@ const BookAndConnect = () => {
         transition={{ duration: 0.6 }}
         className="text-center px-4 mb-12"
       >
-        <h1 className="text-3xl md:text-5xl font-serif text-amber-950 dark:text-[#F1E4D1] mb-3">
-          Book &amp; Connect
+        <h1 className="text-3xl md:text-5xl font-serif text-[#521920] dark:text-[#F1E4D1] mb-3">
+          Book &amp; Contact
         </h1>
-        <p className="text-muted-foreground max-w-xl mx-auto text-base md:text-lg">
+        <p className="max-w-xl mx-auto text-base md:text-lg font-serif text-[#521920]">
           Schedule a session directly or send me a message — I'm here to help
           you find clarity and move forward.
         </p>
@@ -161,14 +161,14 @@ const BookAndConnect = () => {
         <div className="flex justify-center gap-3 mt-6 flex-wrap">
           <a
             href="#booking-section"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-900 text-white text-sm font-semibold hover:bg-amber-950 transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#521920] text-white text-sm font-semibold hover:bg-amber-950 transition-colors shadow-sm"
           >
             <Calendar size={15} />
-            Book Appointment
+            Book A Session
           </a>
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-amber-900/40 text-amber-900 dark:text-[#F1E4D1] text-sm font-semibold hover:bg-amber-900/10 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-amber-900/40 text-[#521920] dark:text-[#F1E4D1] text-sm font-semibold hover:bg-amber-900/10 transition-colors"
           >
             <Mail size={15} />
             Send a Message
@@ -202,7 +202,7 @@ const BookAndConnect = () => {
               </h2>
             </div>
             <p className="text-muted-foreground mb-8 text-sm md:text-base max-w-lg">
-              Pick a time that suits you. Your appointment will sync directly
+              Pick a time that suits you. Your session will sync directly
               with my calendar.
             </p>
 
@@ -235,7 +235,7 @@ const BookAndConnect = () => {
       <div className="max-w-5xl mx-auto px-8 mb-20">
         <div className="relative flex items-center gap-4">
           <div className="flex-1 h-px bg-amber-900/15" />
-          <span className="text-xs uppercase tracking-[0.3em] text-amber-900/50 dark:text-[#F1E4D1]/40 font-sans">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#521920] dark:text-[#F1E4D1]/40 font-serif">
             or reach out directly
           </span>
           <div className="flex-1 h-px bg-amber-900/15" />
@@ -285,7 +285,7 @@ const BookAndConnect = () => {
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setFormResult(""); }}
-                  className="mt-2 text-sm text-amber-900 hover:underline"
+                  className="mt-2 text-sm text-[#521920] hover:underline"
                 >
                   Send another message
                 </button>
@@ -353,7 +353,7 @@ const BookAndConnect = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center justify-center gap-2 w-full bg-amber-900 text-white py-3.5 px-8 rounded-xl hover:bg-amber-950 transition-colors disabled:opacity-70 disabled:cursor-not-allowed font-semibold text-base mt-1 shadow-sm"
+                  className="inline-flex items-center justify-center gap-2 w-full bg-[#521920] text-white py-3.5 px-8 rounded-xl hover:bg-amber-950 transition-colors disabled:opacity-70 disabled:cursor-not-allowed font-semibold text-base mt-1 shadow-sm"
                 >
                   <Send size={16} />
                   {isSubmitting ? "Sending…" : "Send Message"}

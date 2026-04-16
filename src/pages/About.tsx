@@ -16,7 +16,7 @@ const About = () => (
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <p className="text-2xl md:text-3xl font-serif font-semibold text-amber-900/90 dark:text-[#F1E4D1]/90 italic mb-8">
-            Aroha means love, compassion, and care.
+            Mindshift Therepy by Poonam Diwan
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
@@ -24,7 +24,7 @@ const About = () => (
             This practice was created as a quiet, supportive space for people who are experiencing inner change—often during moments when life feels emotionally disorienting or unsteady.
           </p>
           <p className="text-lg md:text-xl font-sans font-medium text-amber-950/90 dark:text-[#F1E4D1]/90 leading-relaxed">
-            At Aroha, emotional responses to life events are not seen as problems to be fixed, but as signals asking for understanding, space, and care.
+            Here emotional responses to life events are not seen as problems to be fixed, but as signals asking for understanding, space, and care.
           </p>
         </ScrollReveal>
       </div>

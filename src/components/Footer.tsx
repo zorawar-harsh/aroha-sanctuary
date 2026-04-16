@@ -75,7 +75,7 @@ const Footer = () => (
       {/* Copyright */}
       <div className="mt-8 pt-5 border-t border-white/10 text-center">
         <p className="text-sm font-bold text-white/60">
-          © {new Date().getFullYear()} Aroha. All rights reserved.
+          © {new Date().getFullYear()} | Mindshift Therapy by Poonam Diwan • All Rights Reserved
         </p>
       </div>
     </div>

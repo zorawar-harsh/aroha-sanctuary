@@ -6,7 +6,7 @@ const testimonials = [
   {
     author: "Shreya Shivohi",
     content: "I had a very good session with Poonam. Before starting, I was completely neutral, but during the session I connected deeply with myself and my life journey. The picture-based approach really helped me reflect, especially the ocean waves...",
-    color: "border-pastel-rose/30",
+    color: "#4A0E15",
     bgAccent: "bg-pastel-rose/10"
   },
   {
@@ -75,13 +75,13 @@ const Testimonial = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-amber-900 dark:text-[#F1E4D1] mb-4">
+            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-[#521920] dark:text-[#F1E4D1] mb-4">
               Quiet Echoes
             </p>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-amber-950 dark:text-[#F1E4D1] mb-6">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#521920] dark:text-[#F1E4D1] mb-6">
               Words from Within
             </h1>
-            <p className="text-base md:text-lg font-sans font-medium text-amber-900/80 dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg font-sans font-medium text-[#521920] dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
               Real reflections from those who have walked the path of inner realignment. Every journey is unique, yet universally human.
             </p>
           </div>
@@ -104,7 +104,7 @@ const Testimonial = () => {
               
               <Quote className="w-8 h-8 text-amber-900/20 dark:text-[#F1E4D1]/20 mb-6 group-hover:text-amber-900/40 dark:group-hover:text-[#F1E4D1]/40 transition-colors" />
               
-              <p className="text-base font-sans font-medium text-amber-950/80 dark:text-[#F1E4D1]/90 leading-relaxed italic flex-grow relative z-10">
+              <p className="text-base font-sans font-medium text-[#521920] dark:text-[#F1E4D1]/90 leading-relaxed italic flex-grow relative z-10">
                 "{testimonial.content}"
               </p>
               
@@ -112,7 +112,7 @@ const Testimonial = () => {
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center font-serif text-lg font-bold text-white shadow-sm ${testimonial.bgAccent.replace('/10', '/80')}`}>
                   {testimonial.author.charAt(0)}
                 </div>
-                <p className="ml-4 font-sans font-bold text-sm tracking-widest text-amber-950 dark:text-[#F1E4D1] uppercase">
+                <p className="ml-4 font-sans font-bold text-sm tracking-widest text-[#521920] dark:text-[#F1E4D1] uppercase">
                   {testimonial.author}
                 </p>
               </div>

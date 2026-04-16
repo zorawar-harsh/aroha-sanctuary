@@ -21,10 +21,10 @@ const Booking = () => {
       >
         <div className="relative z-10">
           <h1 className="text-3xl md:text-4xl font-serif text-amber-950 dark:text-[#F1E4D1] mb-6 text-center">
-            Book an Appointment
+            Book A Session
           </h1>
           <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto">
-            Schedule a session with me at a time that works best for you. Your appointment will directly sync with my calendar.
+            Schedule a session with me at a time that works best for you. Your session will directly sync with my calendar.
           </p>
 
           <div className="w-full min-w-0 bg-transparent rounded-3xl overflow-hidden min-h-[560px] h-[calc(100vh-14rem)] max-h-[900px] sm:min-h-[640px]">
