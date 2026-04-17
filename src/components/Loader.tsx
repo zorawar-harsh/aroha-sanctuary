@@ -17,7 +17,7 @@ const Loader = () => {
                 fontSize="30"
                 fontFamily="Arial, sans-serif"
               >
-                PD
+                
               </text>
             </svg>
           </div>
@@ -35,7 +35,7 @@ const StyledWrapper = styled.div`
   .loader {
     --size: 400px;
     --duration: 2s;
-    --loader-color: #61313d; /* New primary color */
+    --loader-color: ##521920; /* New primary color */
     --text-color: #521920; 
     
     /* Using your new color with low opacity for the glass layers */

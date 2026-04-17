@@ -29,7 +29,7 @@ const FloatingNav = () => {
       >
         <div className="mx-auto flex max-w-[2000px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <Link to="/" className="flex items-center gap-9">
-            <img src={arohaLogo} alt="Aroha" className="h-14 w-auto object-contain" />
+            <img src={arohaLogo} alt="Aroha" className="h-20 w-80 object-contain" />
           </Link>
 
           {/* Desktop Navigation Links */}
