@@ -68,30 +68,35 @@ const Index = () => (
       <div className=" -mt-10 relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center px-4 md:px-8">
 
         {/* Left: Photo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.6 }}
-          className="relative z-10 w-full flex justify-center md:justify-end order-2 md:order-1"
-        >
-          <Suspense
-            fallback={
-              <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center"><Loader /></div>
-            }
-          >
-            <div className="w-full max-w-md lg:max-w-lg pb-12 md:pb-0 mx-auto">
-              <div className="relative">
-                <div className="absolute inset-0 -translate-x-24 -translate-y-12 rounded-[32px] bg-[#521920]/40 shadow-2xl" aria-hidden="true" />
-                <img
-                  src={poonam}
-                  alt="Mindshift Therapy session"
-                  className="relative w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </Suspense>
-        </motion.div>
+<motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.2, delay: 0.6 }}
+  className="relative z-10 w-full flex justify-center md:justify-end order-2 md:order-1"
+>
+  <Suspense
+    fallback={
+      <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center"><Loader /></div>
+    }
+  >
+    <div className="w-full max-w-md lg:max-w-lg pb-12 md:pb-0 mx-auto">
+      <div className="relative">
+        {/* FIX: Use 'hidden' by default (mobile) and 'md:block' for desktop */}
+        <div 
+          className="hidden md:block absolute inset-0 -translate-x-12 -translate-y-6 lg:-translate-x-24 lg:-translate-y-12 rounded-[32px] bg-[#521920]/40 shadow-2xl" 
+          aria-hidden="true" 
+        />
+        
+        <img
+          src={poonam}
+          alt="Mindshift Therapy session"
+          className="relative w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </Suspense>
+</motion.div>
 
         {/* Right: Text */}
         <div className="text-center md:text-left order-1 md:order-2">
@@ -100,7 +105,7 @@ const Index = () => (
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
             className="text-4xl font-bold md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.15] mb-6"
-          >
+          > 
             Uncover What's Holding You Back and Move Forward with Confidence
           </motion.h1>
 
