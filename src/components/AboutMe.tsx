@@ -40,7 +40,7 @@ const AboutMe: React.FC = () => {
         </div>
 
         {/* Detailed Bio */}
-        <div className="max-w-3xl text-center">
+        {/* <div className="max-w-3xl text-center">
           <p className="text-sm md:text-base leading-relaxed opacity-80 uppercase tracking-wide">
             With a background in trauma recovery, community care, and relational wellness, 
             Poonam creates spaces that invite people to unpack family dynamics, build emotional 
@@ -49,7 +49,7 @@ const AboutMe: React.FC = () => {
             that allows us to identify and transform the unconscious patterns that either 
             strengthen or sabotage our adult relationships.
           </p>
-        </div>
+        </div> */}
       </section>
     </>
   );

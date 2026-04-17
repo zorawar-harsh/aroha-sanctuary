@@ -81,7 +81,7 @@ const Index = () => (
           >
             <div className="w-full max-w-md lg:max-w-lg pb-12 md:pb-0 mx-auto">
               <div className="relative">
-                <div className="absolute inset-0 -translate-x-24 -translate-y-12 rounded-[32px] bg-[#521920] shadow-2xl" aria-hidden="true" />
+                <div className="absolute inset-0 -translate-x-24 -translate-y-12 rounded-[32px] bg-[#521920]/40 shadow-2xl" aria-hidden="true" />
                 <img
                   src={poonam}
                   alt="Mindshift Therapy session"
@@ -121,7 +121,7 @@ const Index = () => (
             <Link
               to="/connect"
               id="hero-book-btn"
-              className="inline-block bg-[#4a0e15] btn-ripple border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
+              className="inline-block bg-[#521920] btn-ripple border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
             >
               Book a Session
             </Link>
@@ -257,7 +257,7 @@ const Index = () => (
       </div>
     </section> */}
 
-    <section className="py-16 md:py-24 px-6 relative z-10">
+    <section className="py-16 md:py-24 bg-[#F5F1EB] px-6 relative z-10">
       <div className="max-w-4xl mx-auto text-center">
         <ScrollReveal>
           <div className="bg-white/40 backdrop-blur-xl p-10 md:p-14 relative overflow-hidden border border-[#b37e73]/20 rounded-3xl shadow-lg">
