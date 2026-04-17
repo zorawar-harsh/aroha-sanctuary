@@ -14,7 +14,7 @@ const Loader = () => {
                 dominantBaseline="middle" 
                 textAnchor="middle" 
                 fontWeight="bold"
-                fontSize="16" /* Increased font size for the larger scale */
+                fontSize="30"
                 fontFamily="Arial, sans-serif"
               >
                 PD
@@ -33,15 +33,16 @@ const Loader = () => {
 
 const StyledWrapper = styled.div`
   .loader {
-    --size: 400px; /* Increased from 250px to 400px */
+    --size: 400px;
     --duration: 2s;
-    --main-bg-color: #F3EDE6; 
+    --loader-color: #61313d; /* New primary color */
     --text-color: #521920; 
     
+    /* Using your new color with low opacity for the glass layers */
     --background: linear-gradient(
       0deg,
-      rgba(243, 237, 230, 0.1) 0%,
-      rgba(243, 237, 230, 0.2) 100%
+      rgba(97, 49, 61, 0.15) 0%,
+      rgba(97, 49, 61, 0.3) 100%
     );
 
     height: var(--size);
@@ -56,8 +57,9 @@ const StyledWrapper = styled.div`
     position: absolute;
     background: var(--background);
     border-radius: 50%;
-    border-top: 2px solid rgba(243, 237, 230, 0.8); /* Slightly thicker border for scale */
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 20px 30px -5px; /* Deeper shadow for larger size */
+    /* Brightened border slightly for definition against the darker fill */
+    border-top: 2px solid rgba(255, 255, 255, 0.15); 
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 20px 30px -5px;
     backdrop-filter: blur(10px);
     animation: ripple var(--duration) infinite ease-in-out;
   }
@@ -68,13 +70,13 @@ const StyledWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid var(--main-bg-color);
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
   }
 
-  .loader .box:nth-child(2) { inset: 28%; z-index: 98; animation-delay: 0.2s; border-color: rgba(243, 237, 230, 0.6); }
-  .loader .box:nth-child(3) { inset: 20%; z-index: 97; animation-delay: 0.4s; border-color: rgba(243, 237, 230, 0.4); }
-  .loader .box:nth-child(4) { inset: 10%; z-index: 96; animation-delay: 0.6s; border-color: rgba(243, 237, 230, 0.2); }
-  .loader .box:nth-child(5) { inset: 0%; z-index: 95; animation-delay: 0.8s; border-color: rgba(243, 237, 230, 0.1); }
+  .loader .box:nth-child(2) { inset: 28%; z-index: 98; animation-delay: 0.2s; border-color: rgba(97, 49, 61, 0.4); }
+  .loader .box:nth-child(3) { inset: 20%; z-index: 97; animation-delay: 0.4s; border-color: rgba(97, 49, 61, 0.3); }
+  .loader .box:nth-child(4) { inset: 10%; z-index: 96; animation-delay: 0.6s; border-color: rgba(97, 49, 61, 0.2); }
+  .loader .box:nth-child(5) { inset: 0%; z-index: 95; animation-delay: 0.8s; border-color: rgba(97, 49, 61, 0.1); }
 
   .loader .logo {
     width: 85%;
@@ -96,7 +98,7 @@ const StyledWrapper = styled.div`
       box-shadow: rgba(0, 0, 0, 0.4) 0px 20px 30px -5px;
     }
     50% { 
-      transform: scale(1.08); /* Slightly reduced scale factor so it doesn't overflow at 400px */
+      transform: scale(1.08);
       box-shadow: rgba(0, 0, 0, 0.5) 0px 35px 45px -5px;
     }
   }
@@ -104,10 +106,10 @@ const StyledWrapper = styled.div`
   @keyframes color-change {
     0%, 100% { 
       fill: var(--text-color); 
-      opacity: 0.7;
+      opacity: 0.85; /* Increased opacity slightly to stay visible over the dark loader */
     }
     50% { 
-      fill: var(--text-color); 
+      fill: #ffffff; /* Pulsing to white provides a much better "Mindshift" look against the burgundy */
       opacity: 1;
     }
   }

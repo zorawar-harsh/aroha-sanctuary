@@ -35,7 +35,7 @@ const AboutMe: React.FC = () => {
         <div className="max-w-4xl text-center mb-12 mt-8 md:mt-0">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
             Poonam believes true change begins when you feel safe, heard, and
-            understood—helping you navigate life with clarity and confidence.
+            understood, helping you navigate life with clarity and confidence.
           </h1>
         </div>
 
