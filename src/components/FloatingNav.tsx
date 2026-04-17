@@ -7,9 +7,7 @@ import arohaLogo from "@/assets/aroha-logo.jpeg";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  // { label: "Working", path: "/approach" },
   { label: "Services", path: "/services" },
-  // { label: "Reflections", path: "/reflections" },
   { label: "Book & Contact", path: "/connect" },
   { label: "Testimonial", path: "/testimonial" },
   { label: "Blog", path: "/blog" },
@@ -34,6 +32,7 @@ const FloatingNav = () => {
             <img src={arohaLogo} alt="Aroha" className="h-14 w-auto object-contain" />
           </Link>
 
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-3 flex-wrap">
             {navItems.map((item) => (
               <Link
@@ -50,6 +49,7 @@ const FloatingNav = () => {
             ))}
           </div>
 
+          {/* Desktop Contact Button - Hidden on small screens, shown on md+ */}
           <div className="hidden md:flex items-center">
             <Link
               to="/contact"
@@ -59,13 +59,8 @@ const FloatingNav = () => {
             </Link>
           </div>
 
+          {/* Mobile Menu Toggle Button - Hidden on md+ */}
           <div className="flex items-center gap-2 md:hidden">
-            <Link
-              to="/contact"
-              className="inline-flex items-center rounded-full bg-[#f8d3c1] text-[#511820] px-3 py-2 text-xs font-semibold transition-all duration-300 shadow-lg hover:bg-[#f4b79d]"
-            >
-              Contact
-            </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#1f1d1c]/80 text-white transition hover:bg-[#1f1d1c]"
@@ -77,21 +72,24 @@ const FloatingNav = () => {
         </div>
       </motion.nav>
 
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-x-4 top-20 z-40 rounded-3xl bg-[#521920]/95 border border-[#1f1d1c]/30 shadow-2xl p-4 md:hidden"
+            className="fixed inset-x-4 top-24 z-40 rounded-3xl bg-[#521920]/95 border border-[#1f1d1c]/30 shadow-2xl p-4 md:hidden"
           >
             <div className="flex flex-col gap-2">
+              {/* Contact Button inside Mobile Menu */}
               <Link
                 to="/contact"
-                className="rounded-2xl px-4 py-3 text-base font-semibold bg-[#f8d3c1] text-[#511820] transition-all duration-300 shadow-sm hover:bg-[#f4b79d]"
+                className="rounded-2xl px-4 py-3 text-base font-bold bg-[#f8d3c1] text-[#511820] transition-all duration-300 shadow-sm hover:bg-[#f4b79d] mb-2 text-center"
               >
                 Contact Me
               </Link>
+
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -110,8 +108,7 @@ const FloatingNav = () => {
         )}
       </AnimatePresence>
 
-      <div className="h-20 md:hidden" />
-      <div className="hidden md:block h-20" />
+      <div className="h-20" />
     </>
   );
 };

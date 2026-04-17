@@ -17,7 +17,7 @@ const Loader = () => {
                 fontSize="16" /* Increased font size for the larger scale */
                 fontFamily="Arial, sans-serif"
               >
-                Mindshift
+                PD
               </text>
             </svg>
           </div>
