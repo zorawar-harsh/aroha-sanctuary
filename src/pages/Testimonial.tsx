@@ -16,19 +16,19 @@ const testimonials = [
     bgAccent: "bg-pastel-mint/10"
   },
   {
-    author: "Sophia L.",
+    author: "Harshdeep Singh",
     content: "I came to Aroha feeling entirely untethered. The gentle, judgment-free space allowed me to rebuild my confidence piece by piece. It wasn't a quick fix, but a meaningful transformation.",
     color: "border-pastel-lavender/30",
     bgAccent: "bg-pastel-lavender/10"
   },
   {
-    author: "Michael B.",
+    author: "Ayush C.",
     content: "Sometimes you just need someone to hold a mirror up to your thoughts without judgment. The clarity gained here has shaped how I approach every relationship in my life.",
     color: "border-pastel-peach/30",
     bgAccent: "bg-pastel-peach/10"
   },
   {
-    author: "Amara K.",
+    author: "Vidhi M.",
     content: "The emotional fatigue was heavy, but the sanctuary felt light. Every session felt like walking into a room where I could finally set my burdens down.",
     color: "border-pastel-sky/30",
     bgAccent: "bg-pastel-sky/10"
@@ -113,7 +113,7 @@ const Testimonial = () => {
                   {testimonial.author.charAt(0)}
                 </div>
                 <p className="ml-4 font-sans font-bold text-sm tracking-widest text-[#521920] dark:text-[#F1E4D1] uppercase">
-                  {testimonial.author}
+                  -{testimonial.author}
                 </p>
               </div>
             </motion.div>
