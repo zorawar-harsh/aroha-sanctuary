@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import arohaLogo from "@/assets/aroha-logo.jpeg";
+import arohaLogo from "@/assets/logo.png";
 import { FaWhatsapp } from 'react-icons/fa';
 
 
