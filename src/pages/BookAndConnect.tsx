@@ -206,15 +206,14 @@ const BookAndConnect = () => {
               with my calendar.
             </p>
 
-            <div className="w-full min-w-0 bg-transparent rounded-3xl overflow-hidden min-h-[420px] sm:min-h-[520px] h-auto">
+            <div className="w-full min-w-0 bg-transparent rounded-3xl overflow-hidden" style={{ height: "700px" }}>
               {showInlineCalendly ? (
                 <InlineWidget
                   url={CALENDLY_URL}
                   styles={{
-                    height: "100%",
+                    height: "700px",
                     width: "100%",
                     minWidth: "0",
-                    minHeight: "100%",
                   }}
                   pageSettings={{
                     hideEventTypeDetails: false,
@@ -222,7 +221,7 @@ const BookAndConnect = () => {
                   }}
                 />
               ) : (
-                <div className="flex h-full items-center justify-center rounded-3xl bg-[#F1E4D1]/40 dark:bg-[#2A1A17]/40 min-h-[560px]">
+                <div className="flex h-full items-center justify-center rounded-3xl bg-[#F1E4D1]/40 dark:bg-[#2A1A17]/40" style={{ height: "700px" }}>
                   <Loader />
                 </div>
               )}
