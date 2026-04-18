@@ -17,7 +17,7 @@ const testimonials = [
   },
   {
     author: "Harshdeep Singh",
-    content: "I came to Aroha feeling entirely untethered. The gentle, judgment-free space allowed me to rebuild my confidence piece by piece. It wasn't a quick fix, but a meaningful transformation.",
+    content: "I came to Poonam Diwan feeling entirely untethered. The gentle, judgment-free space allowed me to rebuild my confidence piece by piece. It wasn't a quick fix, but a meaningful transformation.",
     color: "border-pastel-lavender/30",
     bgAccent: "bg-pastel-lavender/10"
   },

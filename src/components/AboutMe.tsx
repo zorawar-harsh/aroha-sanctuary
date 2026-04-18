@@ -20,7 +20,7 @@ const AboutMe: React.FC = () => {
             absolute 
             -bottom-12 left-1/2 -translate-x-1/2  /* Center it at the bottom on mobile */
             md:bottom-auto md:top-1/3 md:left-auto md:translate-x-0 md:-right-12 /* Original overlap on desktop */
-            bg-[#4A90E2] text-white p-6 md:p-10 
+            bg-[#B39998] text-white p-6 md:p-10 
             w-[85%] md:w-72 
             shadow-xl z-20"
           >

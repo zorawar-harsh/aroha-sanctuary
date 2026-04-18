@@ -68,35 +68,35 @@ const Index = () => (
       <div className=" -mt-10 relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center px-4 md:px-8">
 
         {/* Left: Photo */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1.2, delay: 0.6 }}
-  className="relative z-10 w-full flex justify-center md:justify-end order-2 md:order-1"
->
-  <Suspense
-    fallback={
-      <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center"><Loader /></div>
-    }
-  >
-    <div className="w-full max-w-md lg:max-w-lg pb-12 md:pb-0 mx-auto">
-      <div className="relative">
-        {/* FIX: Use 'hidden' by default (mobile) and 'md:block' for desktop */}
-        <div 
-          className="hidden md:block absolute inset-0 -translate-x-12 -translate-y-6 lg:-translate-x-24 lg:-translate-y-12 rounded-[32px] bg-[#521920]/40 shadow-2xl" 
-          aria-hidden="true" 
-        />
-        
-        <img
-          src={poonam}
-          alt="Mindshift Therapy session"
-          className="relative w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </Suspense>
-</motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.6 }}
+          className="relative z-10 w-full flex justify-center md:justify-end order-2 md:order-1"
+        >
+          <Suspense
+            fallback={
+              <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center"><Loader /></div>
+            }
+          >
+            <div className="w-full mt-10 max-w-md lg:max-w-lg pb-12 md:pb-0 mx-auto">
+              <div className="relative">
+                {/* FIX: Use 'hidden' by default (mobile) and 'md:block' for desktop */}
+                <div
+                  className="hidden md:block absolute inset-0 -translate-x-12 -translate-y-6 lg:-translate-x-24 lg:-translate-y-12 rounded-[32px]  bg-[#521920]/40 shadow-2xl"
+                  aria-hidden="true"
+                />
+
+                <img
+                  src={poonam}
+                  alt="Mindshift Therapy session"
+                  className="relative w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </Suspense>
+        </motion.div>
 
         {/* Right: Text */}
         <div className="text-center md:text-left order-1 md:order-2">
@@ -105,9 +105,8 @@ const Index = () => (
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
             className="text-4xl font-bold md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.15] mb-6"
-          > 
-            Uncover What's Holding You Back and Move Forward with Confidence
-          </motion.h1>
+          >
+            Feel Heard. Find Clarity. Move Forward          </motion.h1>
 
           <motion.h2
             initial={{ opacity: 0, filter: "blur(20px)" }}
@@ -115,8 +114,7 @@ const Index = () => (
             transition={{ duration: 1.4, delay: 0.6, ease: "easeOut" }}
             className="text-2xl font-medium md:text-3xl font-serif text-muted-foreground leading-relaxed mb-10"
           >
-            Build self-awareness, emotional strength, and healthier, more fulfilling connections in your life
-          </motion.h2>
+            Confidential one-to-one counselling for individuals navigating self-doubt, relationship challenges, life transitions, emotional overwhelm, and feeling stuck between where they are and where they want to be          </motion.h2>
 
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -269,7 +267,7 @@ const Index = () => (
             {/* Decorative gradient accents */}
             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl" />
             <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full blur-3xl" />
-            
+
             <p className="relative z-10 text-2xl md:text-3xl font-serif text-[#511820] leading-relaxed italic">
               Poonam Diwan supports individuals through emotional and personal challenges with
               practical guidance and empathetic understanding—helping them gain clarity, feel more in
