@@ -1,5 +1,5 @@
 import React from 'react';
-import poonam from '../assets/poonam-diwan.jpeg'
+import poonam from '../assets/poonam.jpeg'
 
 const AboutMe: React.FC = () => {
   return (

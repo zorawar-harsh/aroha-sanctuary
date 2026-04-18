@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import poonam from '../assets/poonam-diwan.jpeg';
+import knowYourTherapist from '../assets/know-therapist.jpeg'
 
 const KnowYourTherapist: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const KnowYourTherapist: React.FC = () => {
                 {/* Decorative Frame */}
                 <div className="absolute -inset-4 border border-pastel-lavender/30 rounded-2xl -translate-x-2 translate-y-2" />
                 <img
-                  src={poonam}
+                  src={knowYourTherapist}
                   alt="Poonam Diwan"
                   className="relative w-full h-[600px] object-cover rounded-xl shadow-lg"
                 />

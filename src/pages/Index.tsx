@@ -5,7 +5,7 @@ import ScrollReveal from "../components/ScrollReveal";
 import meditationHero from "@/assets/meditation-hero.jpg";
 import Loader from "../components/Loader";
 import zenBalance from "@/assets/zen-balance.jpg";
-import poonam from "@/assets/poonam-diwan.jpeg";
+import poonam from "@/assets/poonam.jpeg";
 import AboutMe from "@/components/AboutMe";
 import KnowYourTherapist from "@/components/KnowYourTherapist";
 

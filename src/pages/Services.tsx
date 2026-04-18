@@ -10,7 +10,7 @@ import {
   Clock
 } from 'lucide-react';
 
-import poonam from '../assets/poonam-diwan.jpeg'
+import poonam from '../assets/services.jpeg'
 import { Link } from 'react-router-dom';
 
 const Services = () => {

@@ -1,111 +1,215 @@
 import { motion } from "framer-motion";
 import ScrollReveal from "../components/ScrollReveal";
+import { BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen } from "lucide-react";
-
-// Placeholder images from Unsplash optimized for calming themes
-const blogPosts = [
-  {
-    id: 1,
-    title: "Finding Stillness in a Noisy World",
-    excerpt: "The modern world rarely stops moving, but we can learn to anchor ourselves amidst the chaos. Discover simple daily practices for inner quiet.",
-    date: "August 12, 2024",
-    category: "Mindfulness",
-    imgUrl: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Navigating Life Transitions",
-    excerpt: "Change is the only constant, yet it often disrupts our sense of self. How to approach career changes or relationship shifts with grace.",
-    date: "September 05, 2024",
-    category: "Growth",
-    imgUrl: "https://images.unsplash.com/photo-1505364440864-16a704e6c388?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    title: "The Emotional Weight of Responsibility",
-    excerpt: "Feeling like 'something is missing' despite doing everything right? Unpacking emotional fatigue and high-functioning exhaustion.",
-    date: "October 22, 2024",
-    category: "Wellbeing",
-    imgUrl: "https://images.unsplash.com/photo-1436891620584-47fd0e565afb?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    title: "Rebuilding Self-Trust",
-    excerpt: "After periods of self-doubt or trauma, learning to trust your own inner voice again is a slow but beautiful process of reclamation.",
-    date: "November 14, 2024",
-    category: "Healing",
-    imgUrl: "https://images.unsplash.com/photo-1470138988019-3f044bb71337?q=80&w=2070&auto=format&fit=crop",
-  }
-];
+import blog from '../assets/blog.jpeg'
 
 const Blog = () => {
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden">
+    <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 relative overflow-hidden bg-transparent">
       {/* Background Soft Gradients */}
-      <div className="absolute top-0 right-0 w-full h-96 bg-gradient-to-b from-earthy-rust/5 to-transparent -z-10" />
-      <div className="absolute bottom-0 left-0 w-[40rem] h-[40rem] rounded-full bg-pastel-mint/10 blur-[100px] -z-10" />
+      <div className="absolute top-0 right-0 w-full h-96 bg-gradient-to-b from-[#511820]/5 to-transparent -z-10" />
 
-      <div className="max-w-6xl mx-auto">
+      <article className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-20">
-            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-[#521920] dark:text-[#F1E4D1] mb-6 flex items-center justify-center gap-2">
-              <BookOpen size={16} /> Journal
+          <div className="text-center mb-12">
+            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-[#511820] mb-6 flex items-center justify-center gap-2">
+              <BookOpen size={16} /> Reflections
             </p>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#521920] dark:text-[#F1E4D1] mb-6">
-              Reflections on Growth
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#511820] mb-8 leading-tight">
+              Feeling Stuck in Life?<br/>Here’s Where to Begin
             </h1>
-            <p className="text-base md:text-lg font-sans font-medium text-[#521920] dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
-              Gentle guidance, thoughtful inquiries, and practical tools to support your emotional landscape and daily living.
-            </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {blogPosts.map((post, index) => (
-            <ScrollReveal key={post.id} delay={index * 0.1}>
-              <motion.article 
-                className="group cursor-pointer flex flex-col h-full bg-white/40 dark:bg-zinc-900/40 backdrop-blur-sm border border-border/40 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-earthy-rust/5 transition-all duration-500 ease-out hover:-translate-y-1"
-              >
-                {/* Image Container with Micro-interaction Zoom */}
-                <div className="h-64 overflow-hidden relative">
-                  <div className="absolute top-4 left-4 z-10 bg-white/90 dark:bg-[#1a1816]/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#521920] dark:text-[#F1E4D1] shadow-sm transform group-hover:-translate-y-1 transition-transform duration-300">
-                    {post.category}
-                  </div>
-                  <motion.img 
-                    src={post.imgUrl} 
-                    alt={post.title}
-                    className="w-full h-full object-cover origin-center transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  {/* Dark overlay for overlayed effect */}
-                  <div className="absolute inset-0 bg-amber-950/20 group-hover:bg-transparent transition-colors duration-500" />
-                </div>
+        <ScrollReveal delay={0.2}>
+          {/* Blog Image */}
+          <div className="w-full aspect-video md:aspect-[21/9] rounded-3xl overflow-hidden mb-16 shadow-lg">
+            <img src={blog} alt="Feeling Stuck in Life" className="w-full h-full object-cover" />
+          </div>
+        </ScrollReveal>
 
-                <div className="p-8 flex flex-col flex-grow relative">
-                  <p className="text-sm font-sans font-bold text-amber-900/60 dark:text-[#F1E4D1]/60 uppercase tracking-widest mb-3">
-                    {post.date}
-                  </p>
-                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-amber-950 dark:text-[#F1E4D1] mb-4 group-hover:text-amber-900 dark:group-hover:text-white transition-colors duration-300">
-                    {post.title}
-                  </h2>
-                  <p className="text-amber-950/80 dark:text-[#F1E4D1]/80 font-sans leading-relaxed mb-8 flex-grow">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="mt-auto flex items-center justify-between border-t border-border/50 pt-6">
-                    <span className="font-sans font-bold text-sm tracking-widest uppercase text-amber-950 dark:text-[#F1E4D1] group-hover:text-amber-800 transition-colors">
-                      Read Article
-                    </span>
-                    <div className="w-10 h-10 rounded-full bg-earthy-rust/5 flex items-center justify-center group-hover:bg-earthy-rust group-hover:text-white dark:group-hover:text-[#1a1816] dark:text-[#F1E4D1] transition-all duration-300 transform group-hover:translate-x-1">
-                      <ArrowRight size={18} />
-                    </div>
-                  </div>
-                </div>
-              </motion.article>
-            </ScrollReveal>
-          ))}
+        <div className="max-w-2xl mx-auto prose prose-lg prose-headings:font-serif prose-headings:text-[#511820] prose-p:text-[#2A1A17]/80 prose-p:leading-relaxed prose-p:font-serif prose-a:text-[#511820]">
+          
+          <ScrollReveal delay={0.3}>
+            <p className="text-xl md:text-2xl text-[#511820] italic font-serif leading-relaxed mb-10 text-center">
+              "There are phases in life when, even though you’re trying your best, nothing seems to move."
+            </p>
+
+            <p className="text-lg md:text-xl font-serif text-[#2A1A17]/90 leading-relaxed mb-6">
+              You keep putting in effort, but somehow you’re not getting where you want to be. And that feeling… of being stuck… can quietly show up in many areas of life.
+            </p>
+            <p className="text-lg md:text-xl font-serif text-[#2A1A17]/90 leading-relaxed mb-6">
+              It could be your career.<br/>
+              It could be a relationship.<br/>
+              It could be something more internal, just a feeling that you want to move ahead, but you don’t quite know how.
+            </p>
+            <p className="text-lg md:text-xl font-serif text-[#2A1A17]/90 leading-relaxed mb-6">
+              And the truth is, a lot of people are going through this today.
+            </p>
+            <ul className="list-disc pl-6 mb-8 text-[#2A1A17]/80 font-serif text-lg">
+              <li className="mb-2">Some are between jobs, trying to figure out their next step.</li>
+              <li className="mb-2">Some are in the middle of a transition.</li>
+              <li className="mb-2">Some feel stuck in relationships but are unsure what to do.</li>
+              <li>And sometimes, nothing looks “wrong” from the outside, but inside, things don’t feel okay.</li>
+            </ul>
+            <p className="text-lg md:text-xl font-serif text-[#2A1A17]/90 leading-relaxed mb-12">
+              Whatever the reason, this phase can feel heavy and confusing.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-3xl font-bold mt-12 mb-6 font-serif text-[#511820]">Understanding What Is in Your Control</h2>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-4">
+              In moments like this, it can help to pause and ask yourself:
+            </p>
+            <p className="text-xl font-bold text-[#511820] font-serif mb-4">
+              What is actually in my control right now… and what is not?
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-6">
+              There will always be things we cannot control.<br/>
+              But there are also small parts of our life where we still have a say.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-12">
+              And sometimes, gently shifting your attention there can bring a little stability.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-3xl font-bold mt-12 mb-6 font-serif text-[#511820]">The Space Between “Now” and “Next”</h2>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-4">
+              Every stuck phase comes with a kind of in-between space.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-4">
+              A space between where you are right now… and where you want to reach.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-6">
+              It may not feel like it, but this space is not empty.<br/>
+              It holds time, and it holds possibility.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-8">
+              We often spend this time worrying about what’s next, or feeling frustrated about where we are.
+            </p>
+            <div className="bg-[#E8E1D5]/30 p-8 rounded-2xl border-l-4 border-[#b37e73] mb-12">
+              <p className="text-xl italic text-[#511820] font-serif m-0">
+                But what if this phase is not just a pause… what if it is preparing you for what’s ahead?
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-3xl font-bold mt-12 mb-6 font-serif text-[#511820]">Making Meaning of This Time</h2>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-6">
+              Instead of waiting for life to change, you can begin to look at what needs your attention right now.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-6">It doesn’t have to be something big. It could be as simple as:</p>
+            <ul className="list-none space-y-4 mb-10 text-lg font-serif text-[#2A1A17]/90">
+              <li className="flex items-start gap-4">
+                <span className="w-2 h-2 rounded-full bg-[#b37e73] mt-2.5 block shrink-0"></span> 
+                <span>taking care of your health</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-2 h-2 rounded-full bg-[#b37e73] mt-2.5 block shrink-0"></span> 
+                <span>bringing some structure into your day</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-2 h-2 rounded-full bg-[#b37e73] mt-2.5 block shrink-0"></span> 
+                <span>reconnecting with people you haven’t spoken to in a while</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-2 h-2 rounded-full bg-[#b37e73] mt-2.5 block shrink-0"></span> 
+                <span>improving small routines</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-2 h-2 rounded-full bg-[#b37e73] mt-2.5 block shrink-0"></span> 
+                <span>doing things you’ve been putting off</span>
+              </li>
+            </ul>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-12">
+              There are always things we say we’ll do “later.”<br/>
+              But when life gets busy again, that “later” often doesn’t come.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-3xl font-bold mt-12 mb-6 font-serif text-[#511820]">Use Your Time With Intention</h2>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-4">
+              You don’t have to fill your day with pressure.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-6">
+              But it can help to give your day some direction.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-6">
+              Spend some time on what will help you move forward.<br/>
+              And for the rest of the time, try not to get pulled into constant overthinking or self-doubt.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-12">
+              This phase doesn’t have to drain you.<br/>
+              If you allow it, it can slowly strengthen you.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-3xl font-bold mt-12 mb-6 font-serif text-[#511820]">A Gentle Perspective</h2>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-6">
+              Sometimes, when you eventually reach where you want to be, you may look back and realise:
+            </p>
+            <p className="text-xl italic font-bold text-[#511820] mb-6 font-serif text-center">
+              “Maybe this phase had a purpose.”
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-10 text-center">
+              And what will matter then is not just that you reached your goal…<br/>
+              but how you lived through this time.
+            </p>
+            
+            <div className="flex flex-col md:flex-row gap-6 my-12">
+              <div className="flex-1 bg-white/40 p-8 rounded-2xl border border-rose-200/40 text-center">
+                <p className="text-xs font-sans uppercase tracking-widest text-[#511820]/60 mb-4">Instead of feeling...</p>
+                <p className="text-[#511820] font-bold font-serif text-xl">“I wasted that phase…”</p>
+              </div>
+              <div className="flex-1 bg-white/80 p-8 rounded-2xl border border-[#b37e73]/30 shadow-md transform md:-translate-y-2 text-center">
+                <p className="text-xs font-sans uppercase tracking-widest text-[#511820]/60 mb-4">You may feel...</p>
+                <p className="text-[#511820] font-bold font-serif text-xl">“That time changed me in ways I didn’t understand back then.”</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-3xl font-bold mt-12 mb-6 font-serif text-[#511820]">Closing Thought</h2>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-4">
+              If you’re feeling stuck right now, you’re not alone.<br/>
+              And this phase will not last forever.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-6">
+              You don’t need to have everything figured out immediately.
+            </p>
+            <p className="text-lg font-serif text-[#2A1A17]/90 mb-12">
+              Sometimes, it’s okay to just pause… understand what you’re going through…<br/>
+              and take one step at a time.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2}>
+            <div className="mt-20 p-12 bg-white/60 backdrop-blur-md rounded-[2rem] text-center shadow-lg border border-[#b37e73]/30 relative overflow-hidden">
+              <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-rose-200/20 blur-3xl" />
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-[#b37e73]/10 blur-3xl" />
+              
+              <div className="relative z-10">
+                <p className="text-2xl text-[#511820] font-serif mb-8 leading-relaxed italic">
+                  If you feel like talking things through, you’re welcome to explore a one-on-one session in a calm and confidential space.
+                </p>
+                <Link 
+                  to="/connect" 
+                  className="inline-block bg-[#511820] text-[#F1E4D1] px-10 py-4 rounded-full font-sans font-semibold tracking-wide transition-all shadow-md hover:shadow-xl hover:bg-[#3d1118] hover:-translate-y-0.5"
+                >
+                  Book a Session
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
+
         </div>
-      </div>
+      </article>
     </div>
   );
 };
