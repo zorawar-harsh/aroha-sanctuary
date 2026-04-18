@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import arohaLogo from "@/assets/aroha-logo.jpeg";
+import arohaLogo from "../assets/logo.png";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -27,9 +27,9 @@ const FloatingNav = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <div className="mx-auto flex max-w-[2000px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-[2000px] items-center justify-between px-3 py-2 sm:px-6 sm:py-4 lg:px-8">
           <Link to="/" className="flex items-center gap-9">
-            <img src={arohaLogo} alt="Aroha" className="h-20 w-80 object-contain" />
+            <img src={arohaLogo} alt="Aroha" className="h-12 w-48 sm:h-20 sm:w-80 object-contain" />
           </Link>
 
           {/* Desktop Navigation Links */}
