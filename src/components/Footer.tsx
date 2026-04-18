@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 
 const Footer = () => (
-  <footer className=" h-[450px] py-20  px-6 bg-[#4a0e15] border-t border-white/10 relative overflow-hidden">
+  <footer className="py-12 md:py-20 px-6 bg-[#4a0e15] border-t border-white/10 relative overflow-hidden">
     {/* Decorative blobs */}
     <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#d1b2bc]/40 blur-3xl -translate-x-1/2 -translate-y-1/2" />
     <div className="absolute bottom-0 right-0 w-48 h-48 rounded-full bg-[#c4b3ab]/40 blur-3xl translate-x-1/4 translate-y-1/4" />

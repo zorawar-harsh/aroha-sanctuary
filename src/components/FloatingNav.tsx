@@ -27,9 +27,9 @@ const FloatingNav = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <div className="mx-auto flex max-w-[2000px] items-center justify-between px-3 py-2 sm:px-6 sm:py-4 lg:px-8">
+        <div className="mx-auto flex max-w-[2000px] items-center justify-between pl-1 pr-3 py-2 sm:px-6 sm:py-4 lg:px-8">
           <Link to="/" className="flex items-center gap-9">
-            <img src={arohaLogo} alt="Aroha" className="h-12 w-48 sm:h-20 sm:w-80 object-contain" />
+            <img src={arohaLogo} alt="Aroha" className="h-20 w-72 sm:h-20 sm:w-80 object-contain" />
           </Link>
 
           {/* Desktop Navigation Links */}
