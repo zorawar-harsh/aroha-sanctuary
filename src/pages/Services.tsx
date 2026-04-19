@@ -61,14 +61,14 @@ const Services = () => {
           </div>
 
           <div className="w-full md:w-2/3">
-            <h1 className="text-5xl md:text-6xl font-serif font-medium text-[#511820] mb-6">
+            <h1 className="text-4xl lg:text-6xl font-serif font-medium text-[#511820] mb-6">
               How I Can Support You
             </h1>
-            <p className="text-xl font-bold font-serif text-[#511820] leading-relaxed mb-6">
+            <p className="text-2xl font-bold font-serif text-[#511820] leading-relaxed mb-6">
               Life can feel overwhelming at times, whether you're dealing with emotional stress, relationship
               challenges, or important life and career decisions. You don't have to navigate it alone.
             </p>
-            <p className="text-xl font-bold font-serif text-[#511820] leading-relaxed">
+            <p className="text-2xl font-bold font-serif text-[#511820] leading-relaxed">
               Each session is designed to support you in understanding yourself more deeply,
               so you can move forward with clarity, confidence, and a stronger sense of direction.
             </p>
@@ -80,9 +80,9 @@ const Services = () => {
           {services.map((service, index) => (
             <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
               <div className="text-[#511820] mb-4">{service.icon}</div>
-              <h3 className="text-3xl font-semibold text-slate-800 mb-3">{service.title}</h3>
-              <p className="text-xl text-slate-600 font-medium mb-2">{service.description}</p>
-              <p className="text-xl text-slate-500 leading-relaxed">{service.details}</p>
+              <h3 className="text-4xl font-semibold text-[#521920] mb-3">{service.title}</h3>
+              <p className="text-2xl text-[#521920] font-serif mb-2">{service.description}</p>
+              <p className="text-2xl text-[#521920] font-serif  leading-relaxed">{service.details}</p>
             </div>
           ))}
         </div>
@@ -92,15 +92,15 @@ const Services = () => {
           {features.map((f, i) => (
             <div key={i} className="text-center bg-[#FFFFFF] p-4 rounded-sm md:text-left">
               <div className="text-[#511820] mb-3 flex justify-center md:justify-start">{f.icon}</div>
-              <h4 className="text-3xl font-bold text-slate-800 mb-2">{f.title}</h4>
-              <p className="text-xl text-slate-600">{f.desc}</p>
+              <h4 className="text-4xl font-bold text-[#521920] mb-2">{f.title}</h4>
+              <p className="text-2xl font-serif text-[#521920]">{f.desc}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center bg-[#511820] rounded-2xl p-10 text-white">
-          <h3 className="text-3xl font-medium mb-4">Ready to take the first step?</h3>
-          <p className="text-xl text-[#F1E4D1]/80 mb-8 max-w-2xl mx-auto">
+          <h3 className="text-4xl font-medium mb-4">Ready to take the first step?</h3>
+          <p className="text-2xl font-serif text-[#F1E4D1]/80 mb-8 max-w-2xl mx-auto">
             If this resonates with you, book a session and see what opens up for you.
           </p>
           <Link to="/connect" className="inline-block bg-[#F8FAFC] text-[#511820] px-10 py-3.5 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-[#F1E4D1]/20 active:scale-95">

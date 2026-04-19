@@ -104,7 +104,7 @@ const Index = () => (
             initial={{ opacity: 0, filter: "blur(20px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
-            className="text-4xl font-bold md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.15] mb-6"
+            className="text-5xl font-bold md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.15] mb-6"
           >
             Feel Heard. Find Clarity. Move Forward          </motion.h1>
 
@@ -268,7 +268,7 @@ const Index = () => (
             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl" />
             <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full blur-3xl" />
 
-            <p className="relative z-10 text-2xl md:text-3xl font-serif text-[#511820] leading-relaxed italic">
+            <p className="relative z-10 text-2xl md:text-3xl font-serif text-[#511820] leading-relaxed font-bold">
               Poonam Diwan supports individuals through emotional and personal challenges with
               practical guidance and empathetic understanding—helping them gain clarity, feel more in
               control, and move forward with confidence.

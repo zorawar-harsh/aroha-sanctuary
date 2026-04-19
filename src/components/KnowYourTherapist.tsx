@@ -37,7 +37,7 @@ const KnowYourTherapist: React.FC = () => {
                 <h2 className="lg:text-6xl font-bold md:text-5xl font-serif text-5xl text-foreground mb-6">
                   Know Your Therapist
                 </h2>
-                <p className="lg:text-2xl font-bold text-foreground/90 font-serif font-bold  leading-relaxed mb-6">
+                <p className="lg:text-2xl text-2xl font-bold text-foreground/90 font-serif     leading-relaxed mb-6">
                   Poonam Diwan is a psychological counsellor and NLP practitioner with over 20 years of 
                   corporate experience, bringing a grounded and thoughtful perspective to her work.
                 </p>
@@ -45,7 +45,7 @@ const KnowYourTherapist: React.FC = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className=" lg:text-2xl text-2xl space-y-6 text-muted-foreground font-serif font-bold  leading-relaxed  md:text-lg">
+              <div className=" lg:text-2xl text-2xl space-y-6 text-muted-foreground font-serif font-bold leading-relaxed  md:text-lg">
                 <p>
                   She supports individuals who may appear steady on the outside but feel anxious or 
                   disconnected within, especially during times of change, emotional stress, or 

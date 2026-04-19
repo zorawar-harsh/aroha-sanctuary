@@ -150,10 +150,10 @@ const BookAndConnect = () => {
         transition={{ duration: 0.6 }}
         className="text-center px-4 mb-12"
       >
-        <h1 className="text-3xl md:text-5xl font-serif text-[#521920] dark:text-[#F1E4D1] mb-3">
-          Book &amp; Contact
+        <h1 className="text-4xl lg:text-5xl font-serif text-[#521920] dark:text-[#F1E4D1] mb-3">
+          Book &amp; Connect
         </h1>
-        <p className="max-w-xl mx-auto text-base md:text-lg font-serif text-[#521920]">
+        <p className="max-w-xl mx-auto text-2xl lg:text-2xl font-serif text-[#521920]">
           Schedule a session directly or send me a message — I'm here to help
           you find clarity and move forward.
         </p>
@@ -197,11 +197,11 @@ const BookAndConnect = () => {
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-900/10">
                 <Calendar size={18} className="text-amber-900 dark:text-[#F1E4D1]" />
               </span>
-              <h2 className="text-2xl md:text-3xl font-serif text-amber-950 dark:text-[#F1E4D1]">
+              <h2 className="text-3xl lg:text-4xl font-serif text-amber-950 dark:text-[#F1E4D1]">
                 Schedule a Session
               </h2>
             </div>
-            <p className="text-muted-foreground mb-8 text-sm md:text-base max-w-lg">
+            <p className="text-muted-foreground mb-8 text-2xl lg:text-2xl font-serif md:text-base max-w-lg">
               Pick a time that suits you. Your session will sync directly
               with my calendar.
             </p>
@@ -260,11 +260,11 @@ const BookAndConnect = () => {
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-900/10">
                 <Mail size={18} className="text-amber-900 dark:text-[#F1E4D1]" />
               </span>
-              <h2 className="text-2xl md:text-3xl font-serif text-amber-950 dark:text-[#F1E4D1]">
+              <h2 className="text-4xl lg:text-5xl font-serif text-amber-950 dark:text-[#F1E4D1]">
                 Get in Touch
               </h2>
             </div>
-            <p className="text-center text-muted-foreground mb-10 text-sm md:text-base max-w-md mx-auto">
+            <p className="text-center text-muted-foreground mb-10 font-serif text-2xl lg:text-2xl md:text-base max-w-md mx-auto">
               I'm here to hold space for you. Send me a message and I'll get
               back to you as soon as I can.
             </p>

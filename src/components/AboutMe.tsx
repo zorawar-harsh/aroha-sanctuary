@@ -24,7 +24,7 @@ const AboutMe: React.FC = () => {
             w-[85%] md:w-72 
             shadow-xl z-20"
           >
-            <h2 className="text-lg md:text-2xl leading-tight text-center">
+            <h2 className="text-lg md:text-2xl  leading-tight text-center">
               Poonam Diwan is a psychological counsellor and NLP practitioner with over two decades
               of corporate experience 
             </h2>
@@ -33,7 +33,7 @@ const AboutMe: React.FC = () => {
 
         {/* Hero Quote / Statement */}
         <div className="max-w-4xl text-center mb-12 mt-8 md:mt-0">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
+          <h1 className="text-3xl text-[#521920] md:text-4xl lg:text-5xl font-medium leading-tight">
             Poonam believes true change begins when you feel safe, heard, and
             understood, helping you navigate life with clarity and confidence.
           </h1>
