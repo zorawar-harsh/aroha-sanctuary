@@ -92,11 +92,10 @@ const Blog = () => {
             <p className="text-2xl font-serif text-[#52191F]/90 mb-8">
               We often spend this time worrying about what's next, or feeling frustrated about where we are.
             </p>
-            <div className="bg-[#E8E1D5]/30 p-8 rounded-2xl border-l-4 border-[#b37e73] mb-12">
-              <p className="text-2xl italic text-[#52191F] font-serif m-0">
+              <p className="text-2xl text-[#52191F] font-serif m-0">
                 But what if this phase is not just a pause… what if it is preparing you for what's ahead?
               </p>
-            </div>
+            
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
