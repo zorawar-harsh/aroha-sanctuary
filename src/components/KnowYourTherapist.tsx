@@ -14,8 +14,8 @@ const KnowYourTherapist: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left: Image Side */}
-          <div className="lg:col-span-5">
+          {/* Left: Image Side — shows below text on mobile, left on desktop */}
+          <div className="lg:col-span-5 order-2 lg:order-1">
             <ScrollReveal>
               <div className="relative">
                 {/* Decorative Frame */}
@@ -29,8 +29,8 @@ const KnowYourTherapist: React.FC = () => {
             </ScrollReveal>
           </div>
 
-          {/* Right: Content Side */}
-          <div className="lg:col-span-7 space-y-8">
+          {/* Right: Content Side — shows first on mobile, right on desktop */}
+          <div className="lg:col-span-7 space-y-8 order-1 lg:order-2">
             <ScrollReveal delay={0.2}>
               <div>
                 
