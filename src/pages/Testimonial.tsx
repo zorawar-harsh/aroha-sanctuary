@@ -75,13 +75,13 @@ const Testimonial = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-sm md:text-base font-sans font-bold uppercase tracking-[0.2em] text-[#521920] dark:text-[#F1E4D1] mb-4">
+            {/* <p className="text-sm md:text-base font-serif font-bold uppercase tracking-[0.2em] text-[#521920] dark:text-[#F1E4D1] mb-4">
               Quiet Echoes
-            </p>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#521920] dark:text-[#F1E4D1] mb-6">
+            </p> */}
+            <h1 className="text-4xl -mt-4 md:text-6xl font-serif font-bold text-[#521920] dark:text-[#F1E4D1] mb-6">
               Words from Within
             </h1>
-            <p className="text-base md:text-lg font-sans font-medium text-[#521920] dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg font-serif font-medium text-[#521920] dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
               Real reflections from those who have walked the path of inner realignment. Every journey is unique, yet universally human.
             </p>
           </div>
