@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import poonam from '../assets/poonam-diwan.jpeg';
-import knowYourTherapist from '../assets/know-therapist.jpeg'
+import knowYourTherapist from '../assets/knowYourTherapist.jpeg'
 
 const KnowYourTherapist: React.FC = () => {
   return (
