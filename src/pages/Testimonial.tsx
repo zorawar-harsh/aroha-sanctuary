@@ -81,7 +81,7 @@ const Testimonial = () => {
             <h1 className="text-4xl -mt-4 md:text-6xl font-serif font-bold text-[#521920] dark:text-[#F1E4D1] mb-6">
               Words from Within
             </h1>
-            <p className="text-base md:text-lg font-serif font-medium text-[#521920] dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-2xl lg:text-2xl font-serif font-medium text-[#521920] dark:text-[#F1E4D1]/80 max-w-2xl mx-auto leading-relaxed">
               Real reflections from those who have walked the path of inner realignment. Every journey is unique, yet universally human.
             </p>
           </div>

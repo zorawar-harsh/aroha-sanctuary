@@ -14,9 +14,9 @@ const Blog = () => {
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-12">
-            <p className="text-2xl font-sans font-bold uppercase tracking-[0.2em] text-[#52191F] mb-6 flex items-center justify-center gap-2">
+            {/* <p className="text-2xl font-sans font-bold uppercase tracking-[0.2em] text-[#52191F] mb-6 flex items-center justify-center gap-2">
               <BookOpen size={16} /> Reflections
-            </p>
+            </p> */}
             <h1 className="text-4xl lg:text-6xl font-serif font-bold text-[#52191F] mb-8 leading-tight">
               Feeling Stuck in Life?<br/>Here's Where to Begin
             </h1>

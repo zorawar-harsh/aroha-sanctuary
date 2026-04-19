@@ -150,7 +150,7 @@ const BookAndConnect = () => {
         transition={{ duration: 0.6 }}
         className="text-center px-4 mb-12"
       >
-        <h1 className="text-4xl lg:text-5xl font-serif text-[#521920] dark:text-[#F1E4D1] mb-3">
+        <h1 className="text-4xl lg:text-6xl font-serif text-[#521920] dark:text-[#F1E4D1] mb-3">
           Book &amp; Connect
         </h1>
         <p className="max-w-xl mx-auto text-2xl lg:text-2xl font-serif text-[#521920]">
