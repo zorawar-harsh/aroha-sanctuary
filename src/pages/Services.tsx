@@ -28,10 +28,10 @@ const Services = () => {
       details: "Through simple, practical tools and reflective conversations, you will learn to build self-awareness, emotional strength, and a greater sense of inner stability."
     },
     {
-      title: "Career Clarity",
+      title: "Career Clarity & Work Place Support",
       icon: <Briefcase className="w-6 h-6" />,
       description: "Guidance for navigating workplace stress, decision-making, and career transitions.",
-      details: "With a strong corporate background, Poonam understands real-world pressures and helps you approach professional challenges with clarity and balance."
+      details: "Backed by MBA education and over two decades of corporate leadership experience, I understand workplace stress, career confusion, difficult managers, confidence loss, and professional transitions."
     },
     {
       title: "Relationship Support",

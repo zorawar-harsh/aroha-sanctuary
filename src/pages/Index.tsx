@@ -211,7 +211,12 @@ const Index = () => (
 
     {/* <AboutMe/> */}
 
-    <div className="w-full h-[1px] bg-black" ></div>
+    <div className="bg-[#F4F1EA]" >
+      <h1 className="text-4xl uppercase font-black items-center max-w-5xl mx-auto text-center " >
+        Supporting individuals with a rare combination of psychology insight
+        and real-world corporate experience.
+      </h1>
+    </div>
 
     <KnowYourTherapist />
 
