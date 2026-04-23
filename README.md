@@ -13,7 +13,7 @@ npm run dev
 
 - **React** + **TypeScript**
 - **Vite** — build tool
-- **Tailwind CSS** — styling
+- **Tailwind CSS** — stylingh
 - **Framer Motion** — animations
 - **Radix UI** — accessible components
 - **React Router** — routing

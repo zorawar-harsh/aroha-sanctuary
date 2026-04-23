@@ -72,7 +72,7 @@ const Testimonial = () => {
       <div className="absolute bottom-20 right-20 w-[30rem] h-[30rem] rounded-full bg-pastel-mint/10 blur-3xl -z-10" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-pastel-peach/10 blur-3xl -z-10" />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
             {/* <p className="text-sm md:text-base font-serif font-bold uppercase tracking-[0.2em] text-[#521920] dark:text-[#F1E4D1] mb-4">
@@ -88,7 +88,7 @@ const Testimonial = () => {
         </ScrollReveal>
 
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
