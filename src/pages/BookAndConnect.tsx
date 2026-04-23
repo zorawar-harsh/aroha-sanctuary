@@ -14,16 +14,11 @@ export const CalendlyPopup = ({
   open: boolean;
   onClose: () => void;
 }) => {
-  const [ready, setReady] = useState(false);
-
   useEffect(() => {
     if (open) {
-      setReady(false);
-      const t = window.requestAnimationFrame(() => setReady(true));
       // Lock scroll
       document.body.style.overflow = "hidden";
       return () => {
-        window.cancelAnimationFrame(t);
         document.body.style.overflow = "";
       };
     } else {
@@ -73,20 +68,14 @@ export const CalendlyPopup = ({
 
             {/* Calendly widget */}
             <div className="h-[calc(100%-76px)] w-full">
-              {ready ? (
-                <InlineWidget
-                  url={CALENDLY_URL}
-                  styles={{ height: "100%", width: "100%", minWidth: "0" }}
-                  pageSettings={{
-                    hideEventTypeDetails: false,
-                    hideLandingPageDetails: false,
-                  }}
-                />
-              ) : (
-                <div className="flex h-full items-center justify-center">
-                  <Loader />
-                </div>
-              )}
+              <InlineWidget
+                url={CALENDLY_URL}
+                styles={{ height: "100%", width: "100%", minWidth: "0" }}
+                pageSettings={{
+                  hideEventTypeDetails: false,
+                  hideLandingPageDetails: false,
+                }}
+              />
             </div>
           </motion.div>
         </motion.div>
@@ -97,16 +86,10 @@ export const CalendlyPopup = ({
 
 // ─── Main Page ───────────────────────────────────────────────────────────────
 const BookAndConnect = () => {
-  const [showInlineCalendly, setShowInlineCalendly] = useState(false);
   const [formResult, setFormResult] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const frame = window.requestAnimationFrame(() => setShowInlineCalendly(true));
-    return () => window.cancelAnimationFrame(frame);
-  }, []);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -207,24 +190,18 @@ const BookAndConnect = () => {
             </p>
 
             <div className="w-full min-w-0 bg-transparent rounded-3xl overflow-hidden" style={{ height: "700px" }}>
-              {showInlineCalendly ? (
-                <InlineWidget
-                  url={CALENDLY_URL}
-                  styles={{
-                    height: "700px",
-                    width: "100%",
-                    minWidth: "0",
-                  }}
-                  pageSettings={{
-                    hideEventTypeDetails: false,
-                    hideLandingPageDetails: false,
-                  }}
-                />
-              ) : (
-                <div className="flex h-full items-center justify-center rounded-3xl bg-[#F1E4D1]/40 dark:bg-[#2A1A17]/40" style={{ height: "700px" }}>
-                  <Loader />
-                </div>
-              )}
+              <InlineWidget
+                url={CALENDLY_URL}
+                styles={{
+                  height: "700px",
+                  width: "100%",
+                  minWidth: "0",
+                }}
+                pageSettings={{
+                  hideEventTypeDetails: false,
+                  hideLandingPageDetails: false,
+                }}
+              />
             </div>
           </div>
         </motion.div>

@@ -33,6 +33,23 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    // Preconnect to Calendly domains to reduce loading time when navigating to the booking page
+    const preconnectUrls = ['https://calendly.com', 'https://assets.calendly.com'];
+    preconnectUrls.forEach((url) => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = url;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+      
+      const dnsPrefetch = document.createElement('link');
+      dnsPrefetch.rel = 'dns-prefetch';
+      dnsPrefetch.href = url;
+      document.head.appendChild(dnsPrefetch);
+    });
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <AnimatePresence>
