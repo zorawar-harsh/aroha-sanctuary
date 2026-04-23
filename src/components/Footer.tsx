@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import arohaLogo from "@/assets/logo.png";
 import { FaWhatsapp } from 'react-icons/fa';
+import { AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai";
+import { CiLinkedin } from "react-icons/ci";
+
 
 
 const Footer = () => (
@@ -9,7 +12,7 @@ const Footer = () => (
     <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#d1b2bc]/40 blur-3xl -translate-x-1/2 -translate-y-1/2" />
     <div className="absolute bottom-0 right-0 w-48 h-48 rounded-full bg-[#c4b3ab]/40 blur-3xl translate-x-1/4 translate-y-1/4" />
 
-    <div className="max-w-5xl mx-auto relative z-10">
+    <div className="max-w-7xl mx-auto relative z-10">
       <div className="grid md:grid-cols-3 gap-10">
 
         {/* Brand */}
@@ -61,13 +64,29 @@ const Footer = () => (
             >
               &#9993; poonam.diwan@outlook.com
             </a>
-            <a
-              href="https://wa.me/919899630959"
-              className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
-            >
-              <FaWhatsapp className="size-4" />
-              <span>WhatsApp</span>
-            </a>
+            <div className="flex gap-1 lg:gap-2 ">
+              <a
+                href="https://wa.me/919899630959"
+                className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
+              >
+                <FaWhatsapp className="size-7" />
+              </a>
+              <a href=""
+                className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
+              >
+                <AiOutlineInstagram className="size-7" />
+              </a>
+              <a href="https://www.linkedin.com/in/poonam-diwan-43b8399b/"
+                className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
+              >
+                <CiLinkedin className="size-7" />
+              </a>
+              <a href=""
+                className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
+              >
+                <AiOutlineYoutube className="size-7" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
