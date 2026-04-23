@@ -53,7 +53,7 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
-            <CustomCursor />
+            {/* <CustomCursor /> */}
             <ScrollProgress />
             <FloatingNav />
             <Routes>

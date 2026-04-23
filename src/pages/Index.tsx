@@ -89,7 +89,7 @@ const Index = () => (
 
                 <img
                   src={poonam}
-                  alt="Mindshift Therapy session"
+                  alt="MindShift Therapy session"
                   className="relative w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
                   loading="lazy"
                 />

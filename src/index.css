@@ -83,7 +83,7 @@
   body {
     @apply text-foreground font-sans antialiased;
     background-color: #F4F0EB;
-    cursor: none;
+    /* cursor: none; */
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;

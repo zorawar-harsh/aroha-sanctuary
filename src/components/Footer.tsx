@@ -53,7 +53,7 @@ const Footer = () => (
               to="/connect"
               className="text-base font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
             >
-              Book &amp; Contact
+              Book &amp; Connect
             </Link>
             <a
               href="mailto:poonam.diwan@outlook.com"
@@ -75,7 +75,7 @@ const Footer = () => (
       {/* Copyright */}
       <div className="mt-8 pt-5 border-t border-white/10 text-center">
         <p className="text-sm font-bold text-white/60">
-          © {new Date().getFullYear()} | Mindshift Therapy by Poonam Diwan • All Rights Reserved
+          © {new Date().getFullYear()} | MindShift Therapy by Poonam Diwan • All Rights Reserved
         </p>
       </div>
     </div>

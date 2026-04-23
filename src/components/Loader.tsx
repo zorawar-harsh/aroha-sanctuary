@@ -109,7 +109,7 @@ const StyledWrapper = styled.div`
       opacity: 0.85; /* Increased opacity slightly to stay visible over the dark loader */
     }
     50% { 
-      fill: #ffffff; /* Pulsing to white provides a much better "Mindshift" look against the burgundy */
+      fill: #ffffff; /* Pulsing to white provides a much better "MindShift" look against the burgundy */
       opacity: 1;
     }
   }

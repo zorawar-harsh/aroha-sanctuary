@@ -91,7 +91,7 @@ const PrivacyPolicy: React.FC = () => {
 
         {/* Footer Note */}
         <footer className="mt-24 text-center text-xs text-muted-foreground/60 tracking-widest uppercase">
-          © {new Date().getFullYear()} Mindshift Therapy • All Rights Reserved
+          © {new Date().getFullYear()} MindShift Therapy • All Rights Reserved
         </footer>
       </div>
     </section>

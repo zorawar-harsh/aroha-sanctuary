@@ -11,26 +11,28 @@ const KnowYourTherapist: React.FC = () => {
       {/* Background Decorative Element */}
       <div className="absolute top-1/4 -right-20 w-80 h-80 rounded-full bg-pastel-rose/5 blur-3xl" />
       
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left: Image Side — shows below text on mobile, left on desktop */}
-          <div className="lg:col-span-5 order-2 lg:order-1">
-            <ScrollReveal>
-              <div className="relative">
-                {/* Decorative Frame */}
-                <div className="absolute -inset-4 border border-pastel-lavender/30 rounded-2xl -translate-x-2 translate-y-2" />
-                <img
-                  src={knowYourTherapist}
-                  alt="Poonam Diwan"
-                  className="relative w-full h-[600px] object-cover rounded-xl shadow-lg"
-                />
+          <div className="relative z-10 w-full flex justify-center md:justify-end order-2 md:order-1">
+            <ScrollReveal className="w-full">
+              <div className="w-full max-w-md lg:max-w-lg mx-auto">
+                <div className="relative">
+                  {/* Decorative Frame */}
+                  <div className="hidden md:block absolute -inset-4 border border-pastel-lavender/30 rounded-[32px] -translate-x-2 translate-y-2" />
+                  <img
+                    src={knowYourTherapist}
+                    alt="Poonam Diwan"
+                    className="relative w-full h-80 md:h-[400px] lg:h-[550px] object-cover object-top rounded-3xl shadow-xl"
+                  />
+                </div>
               </div>
             </ScrollReveal>
           </div>
 
           {/* Right: Content Side — shows first on mobile, right on desktop */}
-          <div className="lg:col-span-7 space-y-8 order-1 lg:order-2">
+          <div className="text-center md:text-left space-y-8 order-1 md:order-2">
             <ScrollReveal delay={0.2}>
               <div>
                 
@@ -60,10 +62,10 @@ const KnowYourTherapist: React.FC = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.4}>
-              <div className="pt-4">
+              <div className="pt-4 flex items-center justify-center md:justify-start lg:pt-4">
                 <Link
                   to="/connect"
-                  className="inline-block bg-[#4a0e15] text-[#E1DAC7] px-10 py-4 rounded-full font-sans text-sm tracking-wide hover:bg-[#521920] transition-all duration-300 shadow-md"
+                  className="inline-block  bg-[#4a0e15] text-[#E1DAC7] px-10 py-4 rounded-full font-sans text-sm tracking-wide hover:bg-[#521920] transition-all duration-300 shadow-md"
                 >
                   Book a Session
                 </Link>
