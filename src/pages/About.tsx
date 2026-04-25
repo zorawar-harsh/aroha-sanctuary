@@ -16,7 +16,7 @@ const About = () => (
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <p className="text-2xl md:text-3xl font-serif font-semibold text-amber-900/90 dark:text-[#F1E4D1]/90 italic mb-8">
-            MindShift Therepy by Poonam Diwan
+            MindShift Therapy by Poonam Diwan
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
