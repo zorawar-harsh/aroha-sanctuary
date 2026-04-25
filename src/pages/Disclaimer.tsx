@@ -1,7 +1,7 @@
 import React from 'react';
-import ScrollReveal from './ScrollReveal';
+import ScrollReveal from '../components/ScrollReveal';
 
-const PrivacyPolicy: React.FC = () => {
+const Disclaimer: React.FC = () => {
   return (
     <section className="bg-[#F4F1EA] min-h-screen section-padding pt-32 pb-20 relative overflow-hidden">
       {/* Subtle background orbs */}
@@ -12,10 +12,10 @@ const PrivacyPolicy: React.FC = () => {
         <ScrollReveal>
           <header className="text-center mb-16">
             <span className="text-xs font-sans uppercase tracking-[0.3em] text-sage-dark/60 block mb-4">
-              Commitment to Care
+              Important Information
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-light text-foreground">
-              Privacy Policy
+              Disclaimer
             </h1>
             <div className="w-20 h-px bg-pastel-rose/40 mx-auto mt-8" />
           </header>
@@ -23,75 +23,65 @@ const PrivacyPolicy: React.FC = () => {
 
         <div className="space-y-12">
 
-          {/* 1. Introduction */}
+          {/* Section: Medical and Professional Advice Disclaimer */}
           <ScrollReveal delay={0.1}>
             <div className="grid md:grid-cols-3 gap-8 items-start">
               <div className="md:col-span-1">
                 <h2 className="text-2xl font-serif text-foreground border-b border-pastel-lavender/30 pb-2">
-                  Introduction
+                  Medical and Professional Advice Disclaimer
                 </h2>
               </div>
               <div className="md:col-span-2 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Your privacy is important to us. This website is committed to protecting your personal information and ensuring a safe and secure experience.
+                  The information provided on poonamdiwan.com, including text, graphics, images, and other material, is for educational and informational purposes only. Poonam Diwan provides services as a psychological counselor and NLP practitioner; however, the content on this website is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition or mental health disorder.
                 </p>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* 2. Information We Collect */}
+          {/* Section: No Therapist-Client Relationship */}
           <ScrollReveal delay={0.2}>
             <div className="grid md:grid-cols-3 gap-8 items-start">
               <div className="md:col-span-1">
                 <h2 className="text-2xl font-serif text-foreground border-b border-pastel-peach/30 pb-2">
-                  Information We Collect
+                  No Therapist-Client Relationship
                 </h2>
               </div>
-              <div className="md:col-span-2 space-y-4">
+              <div className="md:col-span-2">
                 <p className="text-muted-foreground leading-relaxed">
-                  When you interact with this website, you may choose to share personal information such as 
-                  <strong> name, email address, and phone number</strong>—primarily when booking a session 
-                  or contacting us.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong>Note:</strong> You may browse the website without providing any personal information.
+                  Your use of this website, including the submission of contact forms or sending emails, does not create a therapist-client relationship between you and Poonam Diwan. A formal relationship is only established once a service agreement has been signed by both parties and a consultation has commenced.
                 </p>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* 3. How Your Information Is Used */}
+          {/* Section: Emergency & Crisis Disclaimer */}
           <ScrollReveal delay={0.3}>
             <div className="grid md:grid-cols-3 gap-8 items-start">
               <div className="md:col-span-1">
                 <h2 className="text-2xl font-serif text-foreground border-b border-pastel-sky/30 pb-2">
-                  How Your Information Is Used
+                  Emergency & Crisis Disclaimer
                 </h2>
               </div>
-              <div className="md:col-span-2 space-y-4">
+              <div className="md:col-span-2">
                 <p className="text-muted-foreground leading-relaxed">
-                  Your information is used only to:
+                  This website is not monitored 24/7 and is not intended for use in an emergency. If you are experiencing a mental health crisis, or if you or someone else is in immediate danger, please contact your local emergency services (e.g., 112 in India) or visit the nearest hospital emergency department immediately.
                 </p>
-                <ul className="list-disc pl-5 text-muted-foreground space-y-2">
-                  <li>Schedule and manage sessions</li>
-                  <li>Communicate with you regarding appointments</li>
-                  <li>Share relevant updates or respond to your queries</li>
-                </ul>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* 4. Third-Party Disclosure */}
+          {/* Section: Results Disclaimer */}
           <ScrollReveal delay={0.4}>
             <div className="grid md:grid-cols-3 gap-8 items-start">
               <div className="md:col-span-1">
                 <h2 className="text-2xl font-serif text-foreground border-b border-pastel-rose/30 pb-2">
-                  Third-Party Disclosure
+                  Results Disclaimer
                 </h2>
               </div>
-              <div className="md:col-span-2 space-y-4">
+              <div className="md:col-span-2">
                 <p className="text-muted-foreground leading-relaxed">
-                  We do not sell, rent, or share your personal information with third parties for marketing purposes.
+                  Any testimonials or examples shown on this website are shared as possible outcomes and do not guarantee that you or any other individual will achieve the same or similar results.
                 </p>
               </div>
             </div>
@@ -107,4 +97,4 @@ const PrivacyPolicy: React.FC = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default Disclaimer;

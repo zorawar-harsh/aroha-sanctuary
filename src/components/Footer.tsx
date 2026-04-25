@@ -36,6 +36,8 @@ const Footer = () => (
               // { label: "How I Work", path: "/approach" },
               { label: "Services", path: "/services" },
               { label: "Privacy Policy", path: "/privacy-policy" },
+              { label: "Disclaimer", path: "/disclaimer" },
+              { label: "Terms & Conditions", path: "/terms" },
             ].map((item) => (
               <Link
                 key={item.path}

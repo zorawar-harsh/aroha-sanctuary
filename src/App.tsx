@@ -22,6 +22,8 @@ import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import AboutMe from "./components/AboutMe";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import Disclaimer from "./pages/Disclaimer";
+import TermsAndConditions from "./pages/TermsAndConditions";
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -85,6 +87,8 @@ const App = () => {
               <Route path="/testimonial" element={<Testimonial />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+              <Route path="/disclaimer" element={<Disclaimer />}/>
+              <Route path="/terms" element={<TermsAndConditions />}/>
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
