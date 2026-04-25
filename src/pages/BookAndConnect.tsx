@@ -144,7 +144,9 @@ const BookAndConnect = () => {
         <div className="flex justify-center gap-3 mt-6 flex-wrap">
           <a
             href="#booking-section"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#521920] text-white text-sm font-semibold hover:bg-amber-950 transition-colors shadow-sm"
+            // className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#521920] text-white text-sm font-semibold hover:bg-amber-950 transition-colors shadow-sm"
+                          className="inline-flex items-center gap-2 bg-[#521920] btn-ripple border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
+
           >
             <Calendar size={15} />
             Book A Session
@@ -211,7 +213,7 @@ const BookAndConnect = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 mb-20">
         <div className="relative flex items-center gap-4">
           <div className="flex-1 h-px bg-amber-900/15" />
-          <span className="text-xs uppercase tracking-[0.3em] font-bold text-[#521920]  dark:text-[#F1E4D1] font-serif">
+          <span className="text-xl uppercase tracking-[0.2em] font-bold text-[#521920] dark:text-[#F1E4D1] font-serif">
             or reach out directly
           </span>
           <div className="flex-1 h-px bg-amber-900/15" />

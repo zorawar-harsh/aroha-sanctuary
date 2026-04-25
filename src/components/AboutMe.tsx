@@ -1,5 +1,5 @@
 import React from 'react';
-import poonam from '../assets/poonam.jpeg'
+import poonam from '../assets/8E34C3FA-3AEA-4327-AC7B-1D40F10F10C8_1_105_c.jpg'
 
 const AboutMe: React.FC = () => {
   return (
@@ -18,8 +18,8 @@ const AboutMe: React.FC = () => {
           {/* Floating Blue Badge - Adjusted for mobile */}
           <div className="
             absolute 
-            -bottom-12 left-1/2 -translate-x-1/2  /* Center it at the bottom on mobile */
-            md:bottom-auto md:top-1/3 md:left-auto md:translate-x-0 md:-right-12 /* Original overlap on desktop */
+            -bottom-12 left-1/2 -translate-x-20   /* Center it at the bottom on mobile */
+            md:bottom-auto md:top-2/4 md:left-auto md:translate-x-20 md:-right-12 /* Original overlap on desktop */
             bg-[#B39998] text-white p-6 md:p-10 
             w-[85%] md:w-72 
             shadow-xl z-20"
