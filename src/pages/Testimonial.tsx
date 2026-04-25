@@ -10,7 +10,7 @@ const testimonials = [
     bgAccent: "bg-pastel-rose/10"
   },
   {
-    author: "Dr Krishan Mohan",
+    author: "Dr. Mohan ",
     content: "An incredibly centering and beautifully grounded session. The sanctuary holds a rare space of pure non-judgement and warmth. Highly recommended.", // Placeholder used because text wasn't provided!
     color: "border-pastel-mint/30",
     bgAccent: "bg-pastel-mint/10"
@@ -28,13 +28,13 @@ const testimonials = [
     bgAccent: "bg-pastel-peach/10"
   },
   {
-    author: "Vidhi M.",
+    author: "Anonymous",
     content: "The emotional fatigue was heavy, but the sanctuary felt light. Every session felt like walking into a room where I could finally set my burdens down.",
     color: "border-pastel-sky/30",
     bgAccent: "bg-pastel-sky/10"
   },
   {
-    author: "David M.",
+    author: "Anonymous",
     content: "True balance doesn't mean life stops being difficult; it means you stop being easily toppled. I learned how to stand my ground emotionally.",
     color: "border-sage/30",
     bgAccent: "bg-sage/10"

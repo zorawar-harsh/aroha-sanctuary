@@ -211,7 +211,7 @@ const BookAndConnect = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 mb-20">
         <div className="relative flex items-center gap-4">
           <div className="flex-1 h-px bg-amber-900/15" />
-          <span className="text-xs uppercase tracking-[0.3em] text-[#521920] dark:text-[#F1E4D1]/40 font-serif">
+          <span className="text-xs uppercase tracking-[0.3em] font-bold text-[#521920]  dark:text-[#F1E4D1] font-serif">
             or reach out directly
           </span>
           <div className="flex-1 h-px bg-amber-900/15" />

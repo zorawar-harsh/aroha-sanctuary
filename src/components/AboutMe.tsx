@@ -41,7 +41,7 @@ const AboutMe: React.FC = () => {
 
         {/* Detailed Bio */}
         <div className="max-w-5xl text-center mx-auto ">
-          <p className="text-sm text-[#4A0E15] font-bold lg:text-xl  opacity-80 uppercase ">
+          <p className="text-sm text-[#4A0E15] font-bold lg:text-xl  opacity-80  ">
             With over 20 years of corporate leadership experience, I bring a seasoned perspective to personal and professional development. My background is anchored by an MBA in Marketing and Finance, complemented by advanced studies in Psychology (MAPC) and certification as an NLP Practitioner. This diverse expertise allows me to bridge the gap between emotional well-being and practical success. I specialize in supporting individuals through complex life transitions, career hurdles, and relationship dynamics. By integrating psychological insight with real-world leadership strategies, I empower clients to build lasting confidence and navigate their professional and personal journeys with clarity and resilience.
           </p>
         </div>

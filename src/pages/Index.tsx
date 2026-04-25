@@ -275,7 +275,7 @@ const Index = () => (
 
             <p className="relative z-10 text-2xl md:text-3xl font-serif text-[#511820] leading-relaxed font-bold">
               Poonam Diwan supports individuals through emotional and personal challenges with
-              practical guidance and empathetic understanding—helping them gain clarity, feel more in
+              practical guidance and empathetic understanding, helping them gain clarity, feel more in
               control, and move forward with confidence.
             </p>
           </div>
