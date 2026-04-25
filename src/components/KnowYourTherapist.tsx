@@ -41,7 +41,7 @@ const KnowYourTherapist: React.FC = () => {
                 </h2>
                 <p className="lg:text-2xl text-2xl font-bold text-foreground/90 font-serif     leading-relaxed mb-6">
                   Poonam Diwan is a psychological counsellor and NLP practitioner with over 20 years of 
-                  corporate experience, bringing a grounded and thoughtful perspective to her work.
+                  leadership experience, bringing a grounded and thoughtful perspective to her work.
                 </p>
               </div>
             </ScrollReveal>
