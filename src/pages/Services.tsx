@@ -90,7 +90,7 @@ const Services = () => {
         {/* Philosophy/Approach Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-12 border-t border-slate-200">
           {features.map((f, i) => (
-            <div key={i} className="text-center bg-[#FFFFFF] p-4 rounded-sm md:text-left">
+            <div key={i} className="text-center bg-[#FFFFFF] p-8 rounded-sm md:text-left">
               <div className="text-[#511820] mb-3 flex justify-center md:justify-start">{f.icon}</div>
               <h4 className="text-4xl font-bold text-[#521920] mb-2">{f.title}</h4>
               <p className="text-2xl font-serif text-[#521920]">{f.desc}</p>
@@ -98,14 +98,20 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center bg-[#511820] rounded-2xl p-10 text-white">
-          <h3 className="text-4xl font-medium mb-4">Ready to take the first step?</h3>
-          <p className="text-2xl font-serif text-[#F1E4D1]/80 mb-8 max-w-2xl mx-auto">
-            If this resonates with you, book a session and see what opens up for you.
-          </p>
-          <Link to="/connect" className="inline-block bg-[#F8FAFC] text-[#511820] px-10 py-3.5 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-[#F1E4D1]/20 active:scale-95">
-            Book a Session
-          </Link>
+        <div className="mt-16 text-center bg-[#511820] rounded-[2rem] p-12 shadow-lg relative overflow-hidden">
+          {/* Decorative background blurs */}
+          <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-[#b37e73]/20 blur-3xl" />
+          
+          <div className="relative z-10">
+            <h3 className="text-4xl font-medium text-[#F1E4D1] mb-4">Ready to take the first step?</h3>
+            <p className="text-2xl font-serif text-[#F1E4D1]/80 mb-8 max-w-2xl mx-auto">
+              If this resonates with you, book a session and see what opens up for you.
+            </p>
+            <Link to="/connect" className="inline-block bg-[#F4F0EA] btn-ripple border border-transparent text-[#521920] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-[#511820] hover:text-[#F4F0EA] hover:border-[#F4F0EA] hover:-translate-y-0.5 transition-all duration-500 shadow-md hover:shadow-xl active:scale-95">
+              Book a Session
+            </Link>
+          </div>
         </div>
 
       </div>

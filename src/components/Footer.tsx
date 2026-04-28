@@ -36,6 +36,8 @@ const Footer = () => (
               // { label: "How I Work", path: "/approach" },
               { label: "Services", path: "/services" },
               { label: "Privacy Policy", path: "/privacy-policy" },
+              { label: "Disclaimer", path: "/disclaimer" },
+              { label: "Terms & Conditions", path: "/terms" },
             ].map((item) => (
               <Link
                 key={item.path}
@@ -71,12 +73,12 @@ const Footer = () => (
               >
                 <FaWhatsapp className="size-7" />
               </a>
-              <a href=""
+              <a href="https://www.instagram.com/mindshift.poonamdiwan/"
                 className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
               >
                 <AiOutlineInstagram className="size-7" />
               </a>
-              <a href="https://www.linkedin.com/in/poonam-diwan-43b8399b/"
+              <a href="https://www.linkedin.com/company/mindshift-therapy-by-pooonamdiwan/?viewAsMember=true"
                 className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
               >
                 <CiLinkedin className="size-7" />

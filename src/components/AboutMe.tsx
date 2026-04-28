@@ -1,5 +1,5 @@
 import React from 'react';
-import poonam from '../assets/poonam.jpeg'
+import poonam from '../assets/8E34C3FA-3AEA-4327-AC7B-1D40F10F10C8_1_105_c.jpg'
 
 const AboutMe: React.FC = () => {
   return (
@@ -18,8 +18,8 @@ const AboutMe: React.FC = () => {
           {/* Floating Blue Badge - Adjusted for mobile */}
           <div className="
             absolute 
-            -bottom-12 left-1/2 -translate-x-1/2  /* Center it at the bottom on mobile */
-            md:bottom-auto md:top-1/3 md:left-auto md:translate-x-0 md:-right-12 /* Original overlap on desktop */
+            -bottom-12 left-1/2 -translate-x-20   /* Center it at the bottom on mobile */
+            md:bottom-auto md:top-2/4 md:left-auto md:translate-x-20 md:-right-12 /* Original overlap on desktop */
             bg-[#B39998] text-white p-6 md:p-10 
             w-[85%] md:w-72 
             shadow-xl z-20"
@@ -41,7 +41,7 @@ const AboutMe: React.FC = () => {
 
         {/* Detailed Bio */}
         <div className="max-w-5xl text-center mx-auto ">
-          <p className="text-sm text-[#4A0E15] font-bold lg:text-xl  opacity-80 uppercase ">
+          <p className="text-sm text-[#4A0E15] font-bold lg:text-xl  opacity-80  ">
             With over 20 years of corporate leadership experience, I bring a seasoned perspective to personal and professional development. My background is anchored by an MBA in Marketing and Finance, complemented by advanced studies in Psychology (MAPC) and certification as an NLP Practitioner. This diverse expertise allows me to bridge the gap between emotional well-being and practical success. I specialize in supporting individuals through complex life transitions, career hurdles, and relationship dynamics. By integrating psychological insight with real-world leadership strategies, I empower clients to build lasting confidence and navigate their professional and personal journeys with clarity and resilience.
           </p>
         </div>

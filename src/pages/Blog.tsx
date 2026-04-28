@@ -184,9 +184,12 @@ const Blog = () => {
             <p className="text-2xl font-serif text-[#52191F]/90 mb-6">
               You don't need to have everything figured out immediately.
             </p>
-            <p className="text-2xl font-serif text-[#52191F]/90 mb-12">
+            <p className="text-2xl font-serif text-[#52191F]/90 mb-8">
               Sometimes, it's okay to just pause… understand what you're going through…<br/>
               and take one step at a time.
+            </p>
+            <p className="text-right text-xl font-sans font-bold text-[#52191F] tracking-widest">
+              - POONAM DIWAN
             </p>
           </ScrollReveal>
 

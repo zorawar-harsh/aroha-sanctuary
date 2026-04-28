@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import poonam from '../assets/poonam-diwan.jpeg';
-import knowYourTherapist from '../assets/knowYourTherapist.jpeg'
+import knowYourTherapist from '../assets/knowYourTherapist.jpg'
 
 const KnowYourTherapist: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const KnowYourTherapist: React.FC = () => {
               <div className="w-full max-w-md lg:max-w-lg mx-auto">
                 <div className="relative">
                   {/* Decorative Frame */}
-                  <div className="hidden md:block absolute -inset-4 border border-pastel-lavender/30 rounded-[32px] -translate-x-2 translate-y-2" />
+                  <div className="hidden md:block absolute inset-0 -translate-x-12 -translate-y-6 lg:-translate-x-24 lg:-translate-y-12 rounded-[32px] bg-[#521920]/40 shadow-2xl" aria-hidden="true" />
                   <img
                     src={knowYourTherapist}
                     alt="Poonam Diwan"
@@ -39,9 +39,9 @@ const KnowYourTherapist: React.FC = () => {
                 <h2 className="lg:text-6xl font-bold md:text-5xl font-serif text-5xl text-foreground mb-6">
                   Know Your Therapist
                 </h2>
-                <p className="lg:text-2xl text-2xl font-bold text-foreground/90 font-serif     leading-relaxed mb-6">
-                  Poonam Diwan is a psychological counsellor and NLP practitioner with over 20 years of 
-                  corporate experience, bringing a grounded and thoughtful perspective to her work.
+                <p className="lg:text-2xl text-2xl font-bold text-foreground/90 font-serif  leading-relaxed mb-6">
+                  Poonam is a psychological counsellor and NLP practitioner with over 20 years of 
+                  leadership experience, bringing a grounded and thoughtful perspective to her work.
                 </p>
               </div>
             </ScrollReveal>
@@ -65,7 +65,7 @@ const KnowYourTherapist: React.FC = () => {
               <div className="pt-4 flex items-center justify-center md:justify-start lg:pt-4">
                 <Link
                   to="/connect"
-                  className="inline-block  bg-[#4a0e15] text-[#E1DAC7] px-10 py-4 rounded-full font-sans text-sm tracking-wide hover:bg-[#521920] transition-all duration-300 shadow-md"
+              className="inline-block bg-[#521920] btn-ripple border border-sage/20 text-[#E1DAC7] font-sans text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-sage/20 hover:text-[#983355] transition-all duration-500"
                 >
                   Book a Session
                 </Link>
