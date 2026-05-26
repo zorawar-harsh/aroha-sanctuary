@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import arohaLogo from "@/assets/logo.png";
 import { FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai";
+import { LiaFacebookSquare } from "react-icons/lia";
 import { CiLinkedin } from "react-icons/ci";
 
 
@@ -68,7 +69,7 @@ const Footer = () => (
             </a>
             <div className="flex gap-1 lg:gap-2 ">
               <a
-                href="https://wa.me/919899630959"
+                href="https://wa.me/919212105985"
                 className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
               >
                 <FaWhatsapp className="size-7" />
@@ -83,9 +84,13 @@ const Footer = () => (
               >
                 <CiLinkedin className="size-7" />
               </a>
-              <a href=""
+                              
+              <a href="https://https://www.facebook.com/profile.php?id=61590501086487"
                 className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
               >
+                <LiaFacebookSquare  className="size-7" />
+              </a>
+              
                 <AiOutlineYoutube className="size-7" />
               </a>
             </div>
