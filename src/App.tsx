@@ -20,7 +20,7 @@ import AboutMe from "./components/AboutMe";
 // Pages
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import BookAndConnect from "./pages/BookAndConnect";
+// import BookAndConnect from "./pages/BookAndConnect";
 import Testimonial from "./pages/Testimonial";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
@@ -71,7 +71,7 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/connect" element={<BookAndConnect />} />
+            {/* <Route path="/connect" element={<BookAndConnect />} /> */}
 
             {/* Legacy redirects */}
             <Route path="/booking" element={<Navigate to="/connect" replace />} />

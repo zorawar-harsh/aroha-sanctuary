@@ -84,15 +84,15 @@ const Footer = () => (
               >
                 <CiLinkedin className="size-7" />
               </a>
-                              
+
               <a href="https://https://www.facebook.com/profile.php?id=61590501086487"
                 className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
               >
-                <LiaFacebookSquare  className="size-7" />
+                <LiaFacebookSquare className="size-7" />
               </a>
-              
+              {/* <a href = '' >
                 <AiOutlineYoutube className="size-7" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
