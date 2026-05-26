@@ -61,10 +61,10 @@ const Footer = () => (
               Book &amp; Connect
             </Link>
             <a
-              href="mailto:poonam.diwan@outlook.com"
+              href="mailto:mindshifttherapy.pd@gmail.com"
               className="text-base font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
             >
-              &#9993; poonam.diwan@outlook.com
+              &#9993; mindshifttherapy.pd@gmail.com
             </a>
             <div className="flex gap-1 lg:gap-2 ">
               <a
