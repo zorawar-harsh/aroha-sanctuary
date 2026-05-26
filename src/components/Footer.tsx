@@ -73,7 +73,7 @@ const Footer = () => (
               >
                 <FaWhatsapp className="size-7" />
               </a>
-              <a href="https://www.instagram.com/mindshift.poonamdiwan/"
+              <a href="https://instagram.com/poonamdiwan_mindshift"
                 className="text-base flex items-center gap-2 font-semibold text-white/80 hover:text-white transition-colors duration-200 w-fit"
               >
                 <AiOutlineInstagram className="size-7" />
