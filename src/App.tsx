@@ -26,6 +26,7 @@ import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import Disclaimer from "./pages/Disclaimer";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -71,11 +72,12 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/services" element={<Services />} />
-            {/* <Route path="/connect" element={<BookAndConnect />} /> */}
+            <Route path="/connect" element={<Contact />} />
 
             {/* Legacy redirects */}
             <Route path="/booking" element={<Navigate to="/connect" replace />} />
             <Route path="/contact" element={<Navigate to="/connect" replace />} />
+
 
             <Route path="/testimonial" element={<Testimonial />} />
             <Route path="/blog" element={<Blog />} />
