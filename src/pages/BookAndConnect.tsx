@@ -90,6 +90,9 @@ const BookAndConnect = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
+  
+  const embedDomain = typeof window !== "undefined" ? window.location.hostname : "";
+  const calendlyIframeUrl = `${CALENDLY_URL}?embed_domain=${encodeURIComponent(embedDomain)}&embed_type=Inline&hide_landing_page_details=0&hide_event_type_details=0`;
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -200,18 +203,14 @@ const BookAndConnect = () => {
             </p>
 
             <div className="w-full min-w-0 bg-transparent rounded-3xl overflow-hidden" style={{ height: "700px" }}>
-              <InlineWidget
-                url={CALENDLY_URL}
-                styles={{
-                  height: "700px",
-                  width: "100%",
-                  minWidth: "0",
-                }}
-                pageSettings={{
-                  hideEventTypeDetails: false,
-                  hideLandingPageDetails: false,
-                }}
-              />
+              <iframe
+                src={calendlyIframeUrl}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                style={{ minHeight: "700px", border: "0" }}
+                title="Calendly Scheduling"
+              ></iframe>
             </div>
           </div>
         </motion.div>
