@@ -1,88 +1,7 @@
-import { useEffect, useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { InlineWidget, PopupWidget } from "react-calendly";
-import { X, Calendar, Mail, Send, CheckCircle } from "lucide-react";
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { Calendar, Mail, Send, CheckCircle, ExternalLink } from "lucide-react";
 import Loader from "../components/Loader";
-
-const CALENDLY_URL = "https://calendly.com/pdiwan1/0";
-
-// ─── Calendly Popup Modal ────────────────────────────────────────────────────
-export const CalendlyPopup = ({
-  open,
-  onClose,
-}: {
-  open: boolean;
-  onClose: () => void;
-}) => {
-  useEffect(() => {
-    if (open) {
-      // Lock scroll
-      document.body.style.overflow = "hidden";
-      return () => {
-        document.body.style.overflow = "";
-      };
-    } else {
-      document.body.style.overflow = "";
-    }
-  }, [open]);
-
-  return (
-    <AnimatePresence>
-      {open && (
-        <motion.div
-          key="calendly-overlay"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
-          className="fixed inset-0 z-[200] flex items-center justify-center p-4"
-          style={{ backdropFilter: "blur(8px)", background: "rgba(0,0,0,0.55)" }}
-          onClick={(e) => e.target === e.currentTarget && onClose()}
-        >
-          <motion.div
-            initial={{ scale: 0.92, opacity: 0, y: 30 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.92, opacity: 0, y: 30 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-full max-w-3xl bg-white dark:bg-[#1a1614] rounded-3xl overflow-hidden shadow-2xl"
-            style={{ height: "min(90vh, 760px)" }}
-          >
-            {/* Close button */}
-            <button
-              onClick={onClose}
-              aria-label="Close booking calendar"
-              className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-amber-900/10 hover:bg-amber-900/20 text-[#521920] dark:text-[#F1E4D1] transition-colors"
-            >
-              <X size={18} />
-            </button>
-
-            {/* Header strip */}
-            <div className="px-8 pt-6 pb-4 border-b border-amber-900/10">
-              <h2 className="text-xl font-serif text-[#521920] dark:text-[#F1E4D1] font-semibold">
-                Book A Session
-              </h2>
-              <p className="text-sm text-muted-foreground mt-0.5">
-                Choose a time that works best for you.
-              </p>
-            </div>
-
-            {/* Calendly widget */}
-            <div className="h-[calc(100%-76px)] w-full">
-              <InlineWidget
-                url={CALENDLY_URL}
-                styles={{ height: "100%", width: "100%", minWidth: "0" }}
-                pageSettings={{
-                  hideEventTypeDetails: false,
-                  hideLandingPageDetails: false,
-                }}
-              />
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
 
 // ─── Main Page ───────────────────────────────────────────────────────────────
 const BookAndConnect = () => {
@@ -91,8 +10,7 @@ const BookAndConnect = () => {
   const [submitted, setSubmitted] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
   
-  const embedDomain = typeof window !== "undefined" ? window.location.hostname : "";
-  const calendlyIframeUrl = `${CALENDLY_URL}?embed_domain=${encodeURIComponent(embedDomain)}&embed_type=Inline&hide_landing_page_details=0&hide_event_type_details=0`;
+
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -189,28 +107,21 @@ const BookAndConnect = () => {
                 Schedule a Session
               </h2>
             </div>
-            <p className="text-muted-foreground mb-8 text-2xl lg:text-2xl font-serif md:text-base max-w-lg">
-              Pick a time that suits you. Your session will sync directly
-              with my calendar. If the booking calendar does not load below, you can also{" "}
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
+            <div className="text-muted-foreground mb-8 text-xl lg:text-2xl font-serif md:text-base max-w-lg flex flex-col gap-4">
+              <p>
+                To get started, please fill out this short pre-session form:
+              </p>
+              <a 
+                href="https://forms.gle/R8akCAgEbEebCqcD9" 
+                target="_blank" 
                 rel="noopener noreferrer"
-                className="text-[#521920] dark:text-[#E1DAC7] underline font-bold hover:text-amber-950 transition-colors"
+                className="inline-flex items-center gap-2 text-[#521920] dark:text-[#F1E4D1] font-semibold hover:underline"
               >
-                open the scheduler directly in a new tab
-              </a>.
-            </p>
-
-            <div className="w-full min-w-0 bg-transparent rounded-3xl overflow-hidden" style={{ height: "700px" }}>
-              <iframe
-                src={calendlyIframeUrl}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                style={{ minHeight: "700px", border: "0" }}
-                title="Calendly Scheduling"
-              ></iframe>
+                🔗 Google Form Link <ExternalLink size={16} />
+              </a>
+              <p>
+                Once you’ve submitted it, I’ll get back to you with the available session slots.
+              </p>
             </div>
           </div>
         </motion.div>
