@@ -36,6 +36,7 @@ const Footer = () => (
               { label: "About", path: "/about" },
               // { label: "How I Work", path: "/approach" },
               { label: "Services", path: "/services" },
+              { label: "Blog", path: "/blog" },
               { label: "Privacy Policy", path: "/privacy-policy" },
               { label: "Disclaimer", path: "/disclaimer" },
               { label: "Terms & Conditions", path: "/terms" },

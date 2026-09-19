@@ -22,7 +22,8 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import BookAndConnect from "./pages/BookAndConnect";
 import Testimonial from "./pages/Testimonial";
-import Blog from "./pages/Blog";
+import BlogList from "./pages/BlogList";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import Disclaimer from "./pages/Disclaimer";
 import TermsAndConditions from "./pages/TermsAndConditions";
@@ -80,7 +81,8 @@ const App = () => {
 
 
             <Route path="/testimonial" element={<Testimonial />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/terms" element={<TermsAndConditions />} />
